@@ -1,0 +1,411 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <h3 style="text-align: center;">Coloured Trails Game Instructions</h3>
+
+    <div id="instructions">
+
+        <p><br />
+            You will be requested to play the Coloured Trails game. The objective of the game is to gain the highest score possible. 
+            Points may be gained by moving to a target location on the board and rewarded for the amount of coloured chips the player has in 
+            his/her possesion at the end of the round. Coloured trails is a one-round game played on a
+            square board by two or more players. The board consists of a square grid of tiles. Each
+            tile is assigned a solid color from a given palette of colors (e.g., red, blue, green). Two different types of
+            objects may also be placed on top of tiles—these are players and the goal. Tiles may contain multiple
+            players and the goal.
+        </p>
+
+        <img src="img/instructions1.jpg" width="300px" class="center" />
+
+        <p>Each player begins with a number of allocated chips of different colours. Chips are designated colors from
+            the same
+            palette as the board. Players can use chips to build a path towards the target tile.</p>
+
+        <img src="img/instructions2.jpg" width="400px" class="center" />
+
+        <p>Chips may only be used to move to a tile of the same color as the
+            chip (e.g., a player uses one green chip to move to a green tile adjacent to the player’s current
+            position). Players can only move up, down, left or right and not diagonally. Chips may only be used once. 
+        </p>
+
+        <img src="img/instructions3.jpg" width="300px" class="center" />
+
+        <p>The objective of each player is to <b>gain the highest score possible</b> over a set of 10 games (the score
+            from each game will be added together for the final score). During each game you will have one chance to
+            determine the best course of action which will award you with the highest possible amount of points. Often this is achieved
+            by reaching the target tile, however sometimes it is better to do nothing. During the game you may request chips from
+            other players if you need them to reach the target tile. A player must relinquish a chip that has been requested from it, 
+            if they are not already using that chip to reach a goal. If both you and another player have requested the same chip, you have precedance and will get the chip. 
+            If you ask another Player for a chip they need in order to reach the target tile, they will not relinquish the chip but you will still be deducted points for the request.
+            During the game you can assume that the other players are necessarily following the best path in terms of maximizing their
+            score.  </p>
+
+        <p>During each game you can ask all players for as many chips as you want. An interaction with a specific player
+            is considered a single <i>"chip request"</i> regardless of how many chips were requested. The game is
+            constructed as a one-round game. You have 3 minutes per each game to decide if you want to request a chip
+            from other players or not. Once you have decided click "Done" and the next game will begin. If you have not
+            made a decision in 3 minutes, the game will time out and you will not receive any points for that game.</p>
+
+        <img src="img/instructions4.png" width="600px" class="center" />
+
+        <h3 style="text-align: center;">Scoring</h3>
+
+        <p>The scores may range from -500 to +500. The following factors effect the score :</p>
+        <ol>
+            <li>When reaching the goal the player gets a bonus +150 points.</li>
+            <li>Another +5 points are allocated for every chip the player has not used at the end of their play.</li>
+            <li>The act of requesting a chip costs -70 points for each player from whom you request chips, and each
+                single chip requested costs an additional -6
+                points. A chip request refers to an interaction with a specific player regardless of how many chips were
+                requested. Therefore, when possible, you should reduce the number of players you are requesting chips
+                from.</li>
+        </ol>
+
+        <h3 style="text-align: center;">Example</h3>
+        <br />
+        <img src="img/instructionsNoComputerAssistant.png" width="100%" class="center" />
+
+        <p>Consider the game described above. Following the path emphasized by X’s would mean asking Player 1 for 3 white chips and Player 2 for 1 blue chip, reaching the goal and having 5 chips remaining. Your final score would be:</p>
+        <ul>
+            <li>For reaching the goal : +150</li>
+            <li>For the remaining chips : 5*5 = 25</li>
+            <li>For the chip requests : 2*(-70) + 4*(-6) = -164</li>
+            <li>Overall : 150 + 25 – 164 = 11</li>
+        </ul>
+
+        <p>A better course of action under these circumstances would be to do <u>nothing</u>, and not reach the goal at
+            all. Your final score would be:</p>
+        <ul>
+            <li>For not reaching the goal : 0</li>
+            <li>For the remaining chips : 5*5 = 25</li>
+            <li>For the chip requests : 0</li>
+            <li>Overall : 0 + 25 + 0 = 25</li>
+        </ul>
+
+        <!-- MOR VERED TODO changed task-test.html to task-train.html. After the instructions proceed to the training -->
+        <!--<p><a id="test_link" href="task-train.html">Proceed to interface tutorial video, please turn volume up</a>.</p>-->
+    
+
+        <p><br /> <u>You must answer six out of the following ten questions correctly in order to proceed. </u>
+        </p>
+ 
+
+        <div id="test-one" style="display:inline">
+            <p>1. At the end of the game I get extra points for each chip that I didn't use. <BR>
+                <input type="radio" id="test-one1" name="Q1" value="1" onkeydown="evaluateTest(1)" onclick="evaluateTest(1)">a. True<BR>
+                <input type="radio" id="test-one2" name="Q1" value="2" onkeydown="evaluateTest(1)" onclick="evaluateTest(1)">b. False<BR>
+            </p>
+        </div>
+
+        <div id="test-two" style="display:inline">
+            <p>2. Requesting two chips from two different players would cost :<BR>
+                <input type="radio" id="test-two1" name="Q2" value="1" onkeydown="evaluateTest(2)" onclick="evaluateTest(2)">a. 70 + 6 + 6 = 82 points<BR>
+                <input type="radio" id="test-two2" name="Q2" value="2" onkeydown="evaluateTest(2)" onclick="evaluateTest(2)">b. 6 + 6 = 12 points<BR>
+                <input type="radio" id="test-two3" name="Q2" value="3" onkeydown="evaluateTest(2)" onclick="evaluateTest(2)">c. 70 + 6 + 70 + 6 = 152 points<BR>
+            </p>
+        </div>
+
+        <div id="test-three" style="display:inline">
+            <p>3. It is always better to reach the target tile, than to do nothing, even if it leads to a lower score. <BR>
+                <input type="radio" id="test-three1" name="Q3" value="1" onkeydown="evaluateTest(3)" onclick="evaluateTest(3)">a. True<BR>
+                <input type="radio" id="test-three2" name="Q3" value="2" onkeydown="evaluateTest(3)" onclick="evaluateTest(3)">b. False<BR>
+            </p>
+        </div>
+
+        <div id="test-four" style="display:inline">
+            <p>4. Which of the following influence the final score ?<BR>
+                <input type="radio" id="test-four1" name="Q4" value="1" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">a. You are awarded an additional 5 points for each chip remaining at the end of the game.<BR>
+                <input type="radio" id="test-four2" name="Q4" value="2" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">b. Reaching the goal is worth 150 points.<BR>
+                <input type="radio" id="test-four3" name="Q4" value="3" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">c. A chip request from a single player costs 70 points, with each chip requested costing an additional 6 points.<BR>
+                <input type="radio" id="test-four4" name="Q4" value="4" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">d. The final score is calculated by summing all of the above.<BR>
+            </p>
+        </div>
+
+        <div id="test-five" style="display:inline">
+            <p>5. It is better to ask two chips from two different players than to ask one player for two chips. <BR>
+                <input type="radio" id="test-five1" name="Q5" value="1" onkeydown="evaluateTest(5)" onclick="evaluateTest(5)">a. True<BR>
+                <input type="radio" id="test-five2" name="Q5" value="2" onkeydown="evaluateTest(5)" onclick="evaluateTest(5)">b. False<BR>
+            </p>
+        </div>
+
+        <div id="test-six" style="display:inline">
+            <p>6. If I have reached the goal by asking two different players for 2 chips each, and I have 3 chips left over, my final score would be :<BR>
+                <input type="radio" id="test-six1" name="Q6" value="1" onkeydown="evaluateTest(6)" onclick="evaluateTest(6)">a. 150 points for reaching the goal + 3 * 5 points for every chip remaining = 165 points<BR>
+                <input type="radio" id="test-six2" name="Q6" value="2" onkeydown="evaluateTest(6)" onclick="evaluateTest(6)">b. 150 points for reaching the goal + 3 * 5 points for every chip remaining - 70 points for the chip requests = 95<BR>
+                <input type="radio" id="test-six3" name="Q6" value="3" onkeydown="evaluateTest(6)" onclick="evaluateTest(6)">c. 150 points for reaching the goal + 3 * 5 points for every chip remaining - 70 points for request one - 70 points for request two = 25<BR>
+                <input type="radio" id="test-six4" name="Q6" value="4" onkeydown="evaluateTest(6)" onclick="evaluateTest(6)">d. 150 points for reaching the goal + 3 * 5 points for every chip remaining - 70 points for request one - 70 points for request two - 6 * 4 points for each of the chips requested = 1 point<BR>
+            </p>
+        </div>
+
+        <div id="test-seven" style="display:inline">
+            <p>7. Assuming I had 10 chips to begin with. What would be my score if I did nothing ? <BR>
+                <input type="radio" id="test-seven1" name="Q7" value="1" onkeydown="evaluateTest(7)" onclick="evaluateTest(7)">a. 10 * 5 = 50<BR>
+                <input type="radio" id="test-seven2" name="Q7" value="2" onkeydown="evaluateTest(7)" onclick="evaluateTest(7)">b. 10 * 6 = 60<BR>
+                <input type="radio" id="test-seven3" name="Q7" value="3" onkeydown="evaluateTest(7)" onclick="evaluateTest(7)">c. 150 + 10 * 5 = 200<BR>
+            </p>
+        </div>
+
+        <div id="test-eight" style="display:inline">
+            <p>8. Player 1 has 4 red chips and 3 blue chips. They are using all of the blue chips to reach the target tile. What will happen if I request a blue chip ?<BR>
+                <input type="radio" id="test-eight1" name="Q8" value="1" onkeydown="evaluateTest(8)" onclick="evaluateTest(8)">a. Player 1 will give me the blue chip.<BR>
+                <input type="radio" id="test-eight2" name="Q8" value="2" onkeydown="evaluateTest(8)" onclick="evaluateTest(8)">b. Player 1 will not give me the blue chip and I will not be deducted points for the request.<BR>
+                <input type="radio" id="test-eight3" name="Q8" value="3" onkeydown="evaluateTest(8)" onclick="evaluateTest(8)">c. Player 1 will not give me the blue chip but I will still be deducted points for the request.<BR>
+            </p>
+        </div>
+
+        <div id="test-nine" style="display:inline">
+            <p>9. Under what conditions can I move to another tile ? <BR>
+                <input type="radio" id="test-nine1" name="Q9" value="1" onkeydown="evaluateTest(9)" onclick="evaluateTest(9)">a. If the tile is below, above, to the left or to the right of the tile I am currently on.<BR>
+                <input type="radio" id="test-nine2" name="Q9" value="2" onkeydown="evaluateTest(9)" onclick="evaluateTest(9)">b. If I have a chip of the same colour as the tile I want to move to.<BR>
+                <input type="radio" id="test-nine3" name="Q9" value="3" onkeydown="evaluateTest(9)" onclick="evaluateTest(9)">c. Either A or B.<BR>
+                <input type="radio" id="test-nine4" name="Q9" value="4" onkeydown="evaluateTest(9)" onclick="evaluateTest(9)">d. Both A and B.<BR>
+            </p>
+        </div>
+
+        <div id="test-ten" style="display:inline">
+            <p>10. Assuming I had 10 chips to begin with. I can either reach the goal by requesting a blue chip from Player 1 and a red chip from Player 2 and having 5 chips left over. Or I can reach the goal by making no requests but using all of my chips. I should :<BR>
+                <input type="radio" id="test-ten1" name="Q10" value="1" onkeydown="evaluateTest(10)" onclick="evaluateTest(10)">a. Reach the goal without requesting any chips.<BR>
+                <input type="radio" id="test-ten2" name="Q10" value="2" onkeydown="evaluateTest(10)" onclick="evaluateTest(10)">b. Do nothing.<BR>
+                <input type="radio" id="test-ten3" name="Q10" value="3" onkeydown="evaluateTest(10)" onclick="evaluateTest(10)">c. Reach the goal by making the chip requests.<BR>
+            </p>
+        </div>
+
+        <button id="doneEvalUnderstandingBtn" class="btn btn-sm btn-outline-primary" onclick="evaluateUnderstanding()">Done</button>
+
+        <div id="next_page" style="display:none">
+            <!--<p>You have successfully completed the test. <a id="task_instructions_link" href="task-instructions.html">Please click here to proceed</a>.</p>-->
+            <p>You have successfully completed the evaluation. <a id="task_practice_link" href="task-train.html">Please click here to proceed to the interface tutorial video, please turn volume up</a>.</p>
+        </div>
+
+        <div id="end_page" style="display:none">
+            <p>You did not pass the evaluation. <a id="task_end_link" href="evaluation-stop.html">Please click here to proceed</a>.</p>
+        </div>
+
+    </div>
+
+
+    <div class="clear"></div>
+
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- TODO get jquery local -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script>
+
+    var answerArray = [0,0,0,0,0,0,0,0,0,0]
+
+        function evaluateUnderstanding(){
+            var wrong = false;
+            var incorrect = 0;
+            var incorrectAllowed = 4;
+            var errorMessage = "\nYou have made the following mistakes, please try again : ";//"\nYou passed the evaluation but made the following mistakes : ";
+            //Go over the answer array and find out if there were any wrong answers
+            for(var i = 0 ; i < answerArray.length; i++){
+                if(answerArray[i]==0){
+                    incorrect++;
+                    if(i==0)
+                        errorMessage += "\nQuestion 1";//"\n1. At the end of the game I get extra points for each chip that I didn't use. \na. True.";
+                    if(i==1)
+                        errorMessage += "\nQuestion 2";//"\n2. Requesting two chips from two different players would cost : \nc. 70 + 6 + 70 + 6 = 152 points";
+                    if(i==2)
+                        errorMessage += "\nQuestion 3";//"\n3. It is always better to reach the target tile, than to do nothing, even if it leads to a lower score. \nb. False.";
+                    if(i==3)
+                        errorMessage += "\nQuestion 4";//"\n4. Which of the following influence the final score ? \nd. The final score is calculated by summing all of the above.";
+                    if(i==4)
+                        errorMessage += "\nQuestion 5";//"\n5. It is better to ask two chips from two different players than to ask one player for two chips. \nb. False.";
+                    if(i==5)
+                        errorMessage += "\nQuestion 6";//"\n6. If I have reached the goal by asking two different players for 2 chips each, and I have 3 chips left over, my final score would be : \nd. 150 points for reaching the goal + 3 * 5 points for every chip remaining - 70 points for request one - 70 points for request two - 6 * 4 points for each of the chips requested = 1 point.";
+                    if(i==6)
+                        errorMessage += "\nQuestion 7";//"\n7. Assuming I had 10 chips to begin with. What would be my score if I did nothing ? \na. 10 * 5 = 50";
+                    if(i==7)
+                        errorMessage += "\nQuestion 8";//"\n8. Player 1 has 4 red chips and 3 blue chips. They are using all of the blue chips to reach the target tile. What will happen if I request a blue chip ? \nc. Player 1 will not give me the blue chip but I will still be deducted points for the request.";
+                    if(i==8)
+                        errorMessage += "\nQuestion 9";//"\n9. Under what conditions can I move to another tile ? \nd. Both A and B.";
+                    if(i==9)
+                        errorMessage += "\nQuestion 10";//"\n10. Assuming I had 10 chips to begin with. I can either reach the goal by requesting a blue chip from Player 1 and a red chip from Player 2 and having 5 chips left over. Or I can reach the goal by making no requests but using all of my chips. I should : \n a. Reach the goal without requesting any chips.\n";
+                        
+                }
+            }
+
+            
+            
+            
+            //MOR Save to file the evaluation
+            var gameprogress =  qs["id"] + ",InstructionQuestions," + answerArray.toString();
+            saveToFile(gameprogress);
+            // Set the condition.
+            var condition = 0;
+            condition = randomIntFromInterval(0, 2);
+            //document.getElementById("next_page").style.display = "inline";
+            //If more than 4 mistakes kick them out of the experiment
+            if(incorrect > incorrectAllowed)
+            {
+                document.getElementById("next_page").style.display = "none";
+                document.getElementById("end_page").style.display = "inline";
+                //document.getElementById("task_end_link").href = "evaluation-stop.html" + window.location.search + "?id=" + qs["id"]  + "&c=" + condition;//qs["cond"];
+                document.getElementById("task_end_link").href = "evaluation-stop.html" +  "?id=" + qs["id"]  + "&cond=" + condition;//qs["cond"];
+            }
+            else {
+                //document.getElementById("next_page").style.display = "inline";
+                if(incorrect == 0){
+                    errorMessage = "\nCongratulations, you have succesfully passed the evaluation."
+                    alert(errorMessage)
+                    document.getElementById("next_page").style.display = "inline";
+                    //document.getElementById("task_practice_link").href = "task-train.html" + window.location.search + "?id=" + qs["id"] + "&c=" + condition;//qs["cond"];
+                    document.getElementById("task_practice_link").href = "task-train.html"  + "?id=" + qs["id"] + "&cond=" + condition;//
+                }
+                else{
+                alert(errorMessage)
+                }
+                            
+            }
+        }
+
+        function randomIntFromInterval(min, max) { // min and max included
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function evaluateTest(task){
+            if(task == 1 && document.getElementById('test-one1').checked)
+                answerArray[0] = 1;
+            else if( task == 1 && !(document.getElementById('test-one1').checked))
+                answerArray[0] = 0;
+
+            if(task == 2 && document.getElementById('test-two3').checked)
+                answerArray[1] = 1;
+            else if( task == 2 && !(document.getElementById('test-two3').checked))
+                answerArray[1] = 0;
+
+            if(task == 3 && document.getElementById('test-three2').checked)
+                answerArray[2] = 1;
+            else if( task == 3 && !(document.getElementById('test-three2').checked))
+                answerArray[2] = 0;
+
+            if(task == 4 && document.getElementById('test-four4').checked)
+                answerArray[3] = 1;
+            else if( task == 4 && !(document.getElementById('test-four4').checked))
+                answerArray[3] = 0;
+
+            if(task == 5 && document.getElementById('test-five2').checked)
+                answerArray[4] = 1;
+            else if( task == 5 && !(document.getElementById('test-five2').checked))
+                answerArray[4] = 0;
+
+            if(task == 6 && document.getElementById('test-six4').checked)
+                answerArray[5] = 1;
+            else if( task == 6 && !(document.getElementById('test-six4').checked))
+                answerArray[5] = 0;
+
+            if(task == 7 && document.getElementById('test-seven1').checked)
+                answerArray[6] = 1;
+            else if( task == 7 && !(document.getElementById('test-seven1').checked))
+                answerArray[6] = 0;
+
+            if(task == 8 && document.getElementById('test-eight3').checked)
+                answerArray[7] = 1;
+            else if( task == 8 && !(document.getElementById('test-eight3').checked))
+                answerArray[7] = 0;
+
+            if(task == 9 && document.getElementById('test-nine4').checked)
+                answerArray[8] = 1;
+            else if( task == 9 && !(document.getElementById('test-nine4').checked))
+                answerArray[8] = 0;
+
+            if(task == 10 && document.getElementById('test-ten1').checked)
+                answerArray[9] = 1;
+            else if( task == 10 && !(document.getElementById('test-ten1').checked))
+                answerArray[9] = 0;
+            
+        }
+
+        var qs = (function (a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i) {
+                var p = a[i].split('=', 2);
+                if (p.length == 1)
+                    b[p[0]] = "";
+                else
+                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        })(window.location.search.substr(1).split('&'));
+
+        function completionCode() {
+            return Math.floor(Math.random() * 90 + 10) + "0" + Math.floor(Math.random() * 90 + 10) + qs["id"] + Math.floor(Math.random() * 90 + 10) + "x";
+            // return qs["id"] + qs["gender"] + qs["genderc"] + qs["age"] + "-" + Math.floor(Math.random() * (999 - 111)) + 111;
+        }
+
+        function saveToFile(data) {
+            jsonString = String(data);
+            jQuery.ajax({
+            url: baseurl + '/saveactions.php',
+            data: { 'jsonString': jsonString },
+            type: 'POST'
+        });
+}
+
+        $(document).ready(function () {
+            function saveToFile(data) {
+                jsonString = String(data);
+                jQuery.ajax({
+                    url: baseurl + '/savedemographics.php',
+                    data: { 'jsonString': jsonString },
+                    type: 'POST'
+                });
+            }
+
+            var qs = (function (a) {
+                if (a == "") return {};
+                var b = {};
+                for (var i = 0; i < a.length; ++i) {
+                    var p = a[i].split('=', 2);
+                    if (p.length == 1)
+                        b[p[0]] = "";
+                    else
+                        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                }
+                return b;
+            })(window.location.search.substr(1).split('&'));
+
+            var gameprogress = qs["id"] + "," + qs["gender"] + "," + qs["genderc"] + "," + qs["age"] + "," + (new Date).getTime();
+            saveToFile(gameprogress);
+             
+            document.getElementById("test_link").href = "task-train.html" + "?id=" + qs["id"] + "&cond=" + qs["cond"];
+        });
+    </script>
+</body>
+
+</html>

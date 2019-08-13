@@ -1,0 +1,382 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <h3 style="text-align: center;">Colour test</h3>
+
+    <div id="instructions">
+
+        <p><br />This test will assess your ability to distinguish colours. You will be shown four squares, three of which are of identical colour and one which has a unique colour. It is your task to pick the odd one out. This task will be repeated nine times.
+        </p>
+
+        <p><em>Squares will be shown for <u style="color: red"><em>HALF A SECOND</em></u>. Click 'begin test' when you are ready to be shown the colours. The test will begin <u>immediately</u>.</em>
+        </p>
+
+        <button id="startTestBtn" class="btn btn-sm btn-outline-primary" onclick="startTest()">Begin test</button>
+
+        <div id="empty-box">
+            <div id="squares">
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+                <div class="square white"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="test-one" style="display:none">
+            <div id="squares">
+                <div class="square test-1"></div>
+                <div class="square test-1"></div>
+                <div class="square test-2"></div>
+                <div class="square test-1"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="options-one" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(1, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(1, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(1, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(1, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div id="test-two" style="display:none">
+            <div id="squares">
+                <div class="square test-4"></div>
+                <div class="square test-3"></div>
+                <div class="square test-3"></div>
+                <div class="square test-3"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="options-two" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(2, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(2, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(2, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(2, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div id="test-three" style="display:none">
+            <div id="squares">
+                <div class="square test-5"></div>
+                <div class="square test-5"></div>
+                <div class="square test-5"></div>
+                <div class="square test-6"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="options-three" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(3, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(3, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(3, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(3, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div id="test-four" style="display:none">
+            <div id="squares">
+                <div class="square test-7"></div>
+                <div class="square test-8"></div>
+                <div class="square test-7"></div>
+                <div class="square test-7"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="options-four" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(4, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(4, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(4, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(4, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div id="test-five" style="display:none">
+            <div id="squares">
+                <div class="square test-9"></div>
+                <div class="square test-9"></div>
+                <div class="square test-10"></div>
+                <div class="square test-9"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="options-five" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(5, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(5, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(5, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(5, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div id="test-six" style="display:none">
+            <div id="squares">
+                <div class="square test-3"></div>
+                <div class="square test-3"></div>
+                <div class="square test-4"></div>
+                <div class="square test-3"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="options-six" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(6, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(6, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(6, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(6, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div id="test-seven" style="display:none">
+            <div id="squares">
+                <div class="square test-5"></div>
+                <div class="square test-5"></div>
+                <div class="square test-5"></div>
+                <div class="square test-6"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="options-seven" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(7, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(7, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(7, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(7, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div id="test-eight" style="display:none">
+            <div id="squares">
+                <div class="square test-8"></div>
+                <div class="square test-7"></div>
+                <div class="square test-7"></div>
+                <div class="square test-7"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="options-eight" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(8, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(8, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(8, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(8, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div id="test-nine" style="display:none">
+            <div id="squares">
+                <div class="square test-9"></div>
+                <div class="square test-10"></div>
+                <div class="square test-9"></div>
+                <div class="square test-9"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="options-nine" style="display:none">
+            <div class="square-option"><a onclick="evaluateTest(9, 1)" class="btn btn-sm btn-outline-secondary">Option one</a></div>
+            <div class="square-option"><a onclick="evaluateTest(9, 2)" class="btn btn-sm btn-outline-secondary">Option two</a></div>
+            <div class="square-option"><a onclick="evaluateTest(9, 3)" class="btn btn-sm btn-outline-secondary">Option three</a></div>
+            <div class="square-option"><a onclick="evaluateTest(9, 4)" class="btn btn-sm btn-outline-secondary">Option four</a></div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="next_page" style="display:none">
+            <p>You have successfully completed the Colour Blind test. <a id="task_instructions_link" href="task-instructions.html">Please click here to proceed</a>.</p>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- TODO get jquery local -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/countdowntimer.js"></script>
+
+    <script>
+        function startTest() {
+            document.getElementById("startTestBtn").style.visibility = "hidden";
+            document.getElementById("empty-box").style.display = "none";
+            document.getElementById("test-one").style.display = "inline";
+            startTime("one");
+        }
+
+        function randomIntFromInterval(min, max) { // min and max included
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        
+        var incorrect = 0;
+
+        function evaluateTest(task, answer) {
+            if ((task == 1 && answer == 3) || (task == 2 && answer == 1) || (task == 3 && answer == 4) || (task == 4 && answer == 2) || 
+            (task == 5 && answer == 3) || (task == 6 && answer == 3) || (task == 7 && answer == 4) || (task == 8 && answer == 1) || (task == 9 && answer == 2)) {
+                // alert("correct");
+            } else {
+                incorrect++;
+            }
+
+            document.getElementById("empty-box").style.display = "none";
+
+            if (task == 1) {
+                document.getElementById("test-one").style.display = "none";
+                document.getElementById("options-one").style.display = "none";
+                document.getElementById("test-two").style.display = "inline";
+                startTime("two");
+            }
+            if (task == 2) {
+                document.getElementById("test-two").style.display = "none";
+                document.getElementById("options-two").style.display = "none";
+                document.getElementById("test-three").style.display = "inline";
+                startTime("three");
+            }
+            if (task == 3) {
+                document.getElementById("test-three").style.display = "none";
+                document.getElementById("options-three").style.display = "none";
+                document.getElementById("test-four").style.display = "inline";
+                startTime("four");
+            }
+            if (task == 4) {
+                document.getElementById("test-four").style.display = "none";
+                document.getElementById("options-four").style.display = "none";
+                document.getElementById("test-five").style.display = "inline";
+                startTime("five");
+            }
+            if (task == 5) {
+                document.getElementById("test-five").style.display = "none";
+                document.getElementById("options-five").style.display = "none";
+                document.getElementById("test-six").style.display = "inline";
+                startTime("six");
+            }
+            if (task == 6) {
+                document.getElementById("test-six").style.display = "none";
+                document.getElementById("options-six").style.display = "none";
+                document.getElementById("test-seven").style.display = "inline";
+                startTime("seven");
+            }
+            if (task == 7) {
+                document.getElementById("test-seven").style.display = "none";
+                document.getElementById("options-seven").style.display = "none";
+                document.getElementById("test-eight").style.display = "inline";
+                startTime("eight");
+            }
+            if (task == 8) {
+                document.getElementById("test-eight").style.display = "none";
+                document.getElementById("options-eight").style.display = "none";
+                document.getElementById("test-nine").style.display = "inline";
+                startTime("nine");
+            }
+            if (task == 9) {
+                document.getElementById("test-nine").style.display = "none";
+                document.getElementById("options-nine").style.display = "none";
+                document.getElementById("next_page").style.display = "inline";
+
+                // if nr of correct answers
+                if (incorrect > 0) {
+                    document.getElementById("next_page").children[0].textContent = "You did not pass the colour test, the task is now complete. Please enter completion code: " + completionCode() + ".";
+                } else {
+                    // Set the condition.
+                    // condition = 0;
+                    condition = randomIntFromInterval(0, 2);
+                    
+
+                    if(condition == 0) {
+                        document.getElementById("task_instructions_link").href = "task-instructions-no.html" + window.location.search + "&cond=" + condition;
+                    } else {
+                        document.getElementById("task_instructions_link").href = "task-instructions.html" + window.location.search + "&cond=" + condition;
+                    }
+                }
+            }
+        }
+
+        var qs = (function(a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i)
+            {
+                var p=a[i].split('=', 2);
+                if (p.length == 1)
+                    b[p[0]] = "";
+                else
+                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        })(window.location.search.substr(1).split('&'));
+
+        function completionCode() {
+            return Math.floor(Math.random() * 90 + 10) + "0" + Math.floor(Math.random() * 90 + 10) + qs["id"] + Math.floor(Math.random() * 90 + 10) + "x";
+            // return qs["id"] + qs["gender"] + qs["genderc"] + qs["age"] + "-" + Math.floor(Math.random() * (999 - 111)) + 111;
+        }
+
+        function startTime(test) {
+            seconds = 0.5;
+            timer = new CountDownTimer(seconds, 100);
+            timer.onTick(restart).start();
+
+            function restart() {
+                if (this.expired()) {
+                    document.getElementById("empty-box").style.display = "inline";
+                    document.getElementById("test-one").style.display = "none";
+                    document.getElementById("test-two").style.display = "none";
+                    document.getElementById("test-three").style.display = "none";
+                    document.getElementById("test-four").style.display = "none";
+                    document.getElementById("test-five").style.display = "none";
+                    document.getElementById("test-six").style.display = "none";
+                    document.getElementById("test-seven").style.display = "none";
+                    document.getElementById("test-eight").style.display = "none";
+                    document.getElementById("test-nine").style.display = "none";
+
+                    if (test == "one") {
+                        document.getElementById("options-one").style.display = "inline";
+                    }
+                    if (test == "two") {
+                        document.getElementById("options-two").style.display = "inline";
+                    }
+                    if (test == "three") {
+                        document.getElementById("options-three").style.display = "inline";
+                    }
+                    if (test == "four") {
+                        document.getElementById("options-four").style.display = "inline";
+                    }
+                    if (test == "five") {
+                        document.getElementById("options-five").style.display = "inline";
+                    }
+                    if (test == "six") {
+                        document.getElementById("options-six").style.display = "inline";
+                    }
+                    if (test == "seven") {
+                        document.getElementById("options-seven").style.display = "inline";
+                    }
+                    if (test == "eight") {
+                        document.getElementById("options-eight").style.display = "inline";
+                    }
+                    if (test == "nine") {
+                        document.getElementById("options-nine").style.display = "inline";
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

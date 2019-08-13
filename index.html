@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <h3 style="text-align: center;">Explanation in the Coloured Trails Game</h3>
+
+    <p style="text-align:center;">​
+        A/Prof. Piers Howe (Responsible Researcher)<br />
+        Tel: 03 8344 6287; email: pdhowe@unimelb.edu.au<br />
+        Dr. Mor Vered (Postdoctoral Fellow) email: mor.vered@unimelb.edu.au<br />
+        Prof. Liz Sonenberg (Researcher) email: l.sonenberg@unimelb.edu.au<br />
+        A/Prof. Tim Miller (Researcher) email: tmiller@unimelb.edu.au<br /><br />
+        <img alt="University of Melbourne" src="https://brandhub.unimelb.edu.au/guidelines/logos/04_Logo_Vertical-Housed.jpg"
+            width="120" />
+    </p>
+
+    <div id="instructions">
+        <h4>Introduction</h4>
+        <p> <u>This game is not suitable for mobile devices.</u> We would like to invite you to play a game called Coloured Trails. Each player is assigned a given set of chips. Chips are designated colors from the same palette as the board. Chips may be requested from another player if that player is not using them or relinquished to permit movement to a square of the same color as the chip (e.g., a player relinquishes one green chip to move to a green square adjacent to the player’s current position). The scoring of the game depends on reaching a target tile, the number of chip exchanges that took place and the number of chips remaining. In each trial, you would be presented with a new imaginary scenario, comprising several other players on the board. Your job is to find the best exchanges to make for your player so as to achieve the maximum score.</p>
+
+
+        <h4>What would I be asked to do?</h4>
+        <p>You primary job would be to determine which requests it is in the best interest of your player to request or none at all, while considering the overall score of your player in the game. We will measure how well you achieve this task and how long it takes you to do so. At the end we may ask you to respond to a 8 item survey that would assess to what degree you trusted the computer assistant as well as an 8 item survey regarding how well you found the explanation of the computer assistant to be. We expect the experiment to take approximately 30 minutes for the initial 4$ amount and another 20 minutes for the additional 6$.</p>
+
+        <h4>What would be the risks?</h4>
+        <p>There are no preceivable risks.</p>
+
+        <h4>What are the benefits?</h4>
+        <p>By participating you would help us better understand how humans interact with the system and to what degree they trust it. In addition, you would be compensated $4 with an opportunity to earn and extra 6$ based on performance success. It is our intention to publish these results as a journal or conference article. There is no conflicts of interest.</p>
+
+        <h4>How would my confidentiality be protected?</h4>
+        <p>We would not report any personal identifying information. We would report only group aggregate data. Your confidentiality would be protected subject to any legal limitations. Your data would be destroyed five (5) years after publication of these results. It is possible that these results might be used in future research.</p>
+
+        <h4>What if I want to withdraw from the research?</h4>
+        <p>Participation in this research is voluntary. You are free to withdraw at any time and to withdraw any unprocessed data previously supplied.</p>
+
+        <h4>Where can I get further information?</h4>
+        <p>If you have not understood any of this information please contact any of the researchers listed above. This research has been cleared by the Human Research Ethics Committee (HREC ). If you have any concerns about this project please contact the Executive Officer, Human Research Ethics, The University of Melbourne (Tel: 8344 2073; Fax: 9347 6739).</p>
+
+        <br /><br />
+        
+        <form name="demographics" action="task-colour.html" onsubmit="return validate()">
+            <!-- <input type="hidden" id="id" name="id" value="1"> -->
+            <em>Gender</em>:<br />
+                <label><input type="radio" name="gender" value="M" required>Male</label><br />
+                <label><input type="radio" name="gender" value="F">Female</label><br />
+                <label><input type="radio" name="gender" value="custom">Or specify:</label><input type="text" name="genderc" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+            <br /><br />
+            <em>Age</em>:<br />
+            <input type="number" name="age" required>
+            <br /><br />
+            <em>MTurk ID</em>:<br />
+            <input type="test" name="id" required>
+            <br /><br />
+            <input type="submit" class="btn btn-small btn-primary" value="Proceed to instructions" />
+        </form>
+    </div>
+
+    <div class="clear"></div>
+
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- TODO get jquery local -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script>
+        function validate() {
+            var age = document.forms["demographics"]["age"]; 
+            if (age.value < 18 || age.value > 100) { 
+                window.alert("We only accept people between ages 18 and 100. Please try again or quit the task."); 
+                age.focus();
+                return false; 
+            }
+            return true;
+        }
+
+        // $( document ).ready(function() {
+            // document.getElementById('id').value = Math.round(new Date().getTime() + (Math.random() * 100));
+        // });
+    </script>
+</body>
+
+</html>

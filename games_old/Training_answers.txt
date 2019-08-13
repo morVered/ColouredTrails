@@ -1,0 +1,76 @@
+Training Scenarios
+
+
+4 possible colors
+10 initial chips 
+3 players
+board size 5X5
+
+
+Game 1: 
+
+AI suggests asking player 1 for yellow and player 2 for blue
+Score : -76 -76 +9*5 + 150 = 43
+Better to do nothing. Score 50.
+
+
+
+Game 2:
+
+AI suggests asking player 2 for one white
+Score : -76 + 5 * 7 + 150 = 109
+However Player 2 has  a better path than suggested by using its white. 
+The IA suggests for Player 2 to ask 1 blue from player 1 for a score of : -76 + 8 * 10 +150 = 154.
+Instead can use the white and get 5 * 5 + 150 = 175. 
+
+So its better to do nothing and get 50 points. 
+
+
+Game 3:
+
+AI suggests I ask Player 1 for 1 blue chip
+Score : -76 + 5 * 6 + 150 = 104
+
+There exists a better path with no exchanges. 
+1,3 2,3 3,3 3,2 4,2 5,2 5,3 5,4
+The score would be 150 + 3 * 5 = 165
+
+
+Game 4 : 
+AI suggestion is correct 
+
+Game 5 : 
+AI suggestion is correct
+
+
+Game 6 :
+
+AI suggests asking player 1 for one white. 
+Score : 150 -76 + 5 * 6 = 104
+
+But Agent 1 has a better path that doesn't require exchanges but won't enable him to give me one white. 
+So it is better to do nothing.  50 
+
+Agent 1 better path : 
+3 4, 3 3, 4 3, 4 2, 4 1, 3 1, 2 1, 1 1, 0 1
+No exchanges : score 160
+
+
+
+Game 7 :
+Me player asks Player1 for one yellow chip. 
+Cost 150 -76 + 5 * 7 = 109
+
+Me player has better path outside of the bounding box
+0 2, 1 2, 2 2, 3 2, 3 3, 3 4, 2 4
+Cost : 150 + 4*5 = 170
+
+
+
+Game 8 : 
+Suggests you ask Player 1 for 1 blue and player 2 for 1 white
+score = 150-76-76+50 = 48
+Better to do nothing and score 50
+
+
+

@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <h3 style="text-align: center;">Coloured Trails Game Instructions</h3>
+
+    <div id="instructions">
+
+        <p><br />
+            You will be requested to play the Coloured Trails game. The objective of the game is to gain the highest score possible. 
+            Points may be gained by moving to a target location on the board and rewarded for the amount of coloured chips the player has in 
+            his/her possesion at the end of the round. Coloured trails is a one-round game played on a
+            square board by two or more players. The board consists of a square grid of cells of varying sizes. Each
+            square is assigned a solid color from a given palette of colors (e.g., red, blue, green). Two different types of
+            objects may also be placed on top of squares—these are players and the goal. Squares may contain multiple
+            players and the goal.
+        </p>
+
+        <img src="img/instructions1.jpg" width="300px" class="center" />
+
+        <p>Each player begins with a number of allocated chips of different colours. Chips are designated colors from
+            the same
+            palette as the board. Players can use chips to build a path towards the target square</p>
+
+        <img src="img/instructions2.jpg" width="400px" class="center" />
+
+        <p>Chips may only be used to move to a square of the same color as the
+            chip (e.g., a player uses one green chip to move to a green square adjacent to the player’s current
+            position). Players can only move up, down, left or right and not diagonally. Chips may only be used once. 
+        </p>
+
+        <img src="img/instructions3.jpg" width="300px" class="center" />
+
+        <p>The objective of each player is to <b>gain the highest score possible</b> over a set of 10 games (the score
+            from each game will be added together for the final score). During each game you will have one chance to
+            determine the best course of action which will award you with the highest possible amount of points. Often this is achieved
+            by reaching the target square, however sometimes it is better to do nothing. During the game you may request chips from
+            other players if you need them to reach the target square. A player must relinquish a chip that has been requested from it, 
+            if they are not already using that chip to reach a goal. If both you and another player have requested the same chip, you have precedance and will get the chip. 
+            During the game you can assume that the other players are necessarily following the best path in terms of maximizing their
+            score.</p>
+
+        <p>During each game you can ask all players for as many chips as you want. An interaction with a specific player
+            is considered a single <i>"chip request"</i> regardless of how many chips were requested. The game is
+            constructed as a one-round game. You have 3 minutes per each game to decide if you want to request a chip
+            from other players or not. Once you have decided click "Done" and the next game will begin. If you have not
+            made a decision in 3 minutes, the game will time out and you will not receive any points for that game</p>
+
+        <img src="img/instructions4.png" width="600px" class="center" />
+
+        <h3 style="text-align: center;">Scoring</h3>
+
+        <p>The scores may range from -500 to +500. The following factors effect the score :</p>
+        <ol>
+            <li>When reaching the goal the player gets a bonus +150 points.</li>
+            <li>Another +5 points are allocated for every chip the player has not used at the end of their play.</li>
+            <li>The act of requesting a chip costs -70 points for each player from whom you request chips, and each
+                single chip requested costs an additional -6
+                points. A chip request refers to an interaction with a specific player regardless of how many chips were
+                requested. Therefore, when possible, you should reduce the number of players you are requesting chips
+                from.</li>
+        </ol>
+
+        <h3 style="text-align: center;">Example</h3>
+        <br />
+        <img src="img/instructionsNoComputerAssistant.png" width="100%" class="center" />
+
+        <p>Consider the game described above. Following the path emphasized by X’s would mean asking Player 1 for 3 white chips and Player 2 for 1 blue chip, reaching the goal and having 5 chips remaining. Your final score would be:</p>
+        <ul>
+            <li>For reaching the goal : +150</li>
+            <li>For the remaining chips : 5*5 = 25</li>
+            <li>For the chip requests : 2*(-70) + 4*(-6) = -164</li>
+            <li>Overall : 150 + 25 – 164 = 11</li>
+        </ul>
+
+        <p>A better course of action under these circumstances would be to do <u>nothing</u>, and not reach the goal at
+            all. Your final score would be:</p>
+        <ul>
+            <li>For not reaching the goal : 0</li>
+            <li>For the remaining chips : 5*5 = 25</li>
+            <li>For the chip requests : 0</li>
+            <li>Overall : 0 + 25 + 0 = 25</li>
+        </ul>
+        <!-- MOR VERED TODO changed task-test.html to task-train.html. After the instructions proceed to the training -->
+        <p><a id="test_link" href="task-train.html">Proceed to interface tutorial video, please turn volume up</a>.</p>
+    </div>
+
+    </div>
+
+
+    <div class="clear"></div>
+
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- TODO get jquery local -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            function saveToFile(data) {
+                jsonString = String(data);
+                jQuery.ajax({
+                    url: baseurl + '/savedemographics.php',
+                    data: { 'jsonString': jsonString },
+                    type: 'POST'
+                });
+            }
+
+            var qs = (function (a) {
+                if (a == "") return {};
+                var b = {};
+                for (var i = 0; i < a.length; ++i) {
+                    var p = a[i].split('=', 2);
+                    if (p.length == 1)
+                        b[p[0]] = "";
+                    else
+                        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                }
+                return b;
+            })(window.location.search.substr(1).split('&'));
+
+            var gameprogress = qs["id"] + "," + qs["gender"] + "," + qs["genderc"] + "," + qs["age"] + "," + (new Date).getTime();
+            saveToFile(gameprogress);
+
+            document.getElementById("test_link").href = "task-train.html" + "?id=" + qs["id"] + "&cond=" + qs["cond"];
+        });
+    </script>
+</body>
+
+</html>

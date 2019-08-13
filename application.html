@@ -1,0 +1,239 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Modal containing global explanation -->
+  <div class="modal fade" id="globalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Explanation of Computer Assistant Suggestions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will now read a short explanation of how the computer assistant comes up with possible exchange
+            suggestions.</p>
+          <p>The computer assistant compares all of the <em>shortest</em> paths and possible exchanges, between the
+            player and the goal. There are multiple shortest paths between the player and the goal and the computer
+            assistant considers all of them. It then chooses the path and possible exchanges that produce the maximum
+            scoring function while <em>always</em> reaching the target location.</p>
+          <p>It would take too long to calculate <em>all</em> of the possible paths from the players' initial position
+            to the goal so the computer assistant only considers <em>all</em> of the paths with the shortest distance
+            (there is more than one). The computer assistant also doesn't consider situations in which it might be best
+            to do nothing. This could lead to a wrong suggestion.</p>
+          <p>If a longer path exists in which there are no requests needed, and would therefore generate a higher score,
+            the computer assistant would not suggest it. Also if doing nothing is better than performing several
+            exchanges to reach the goal, the computer assistant would not suggest it.</p>
+          <p>The computer assistant calculates the path score as follows:
+            <ol>
+              <li>The player gets +150 points for reaching the goal.</li>
+              <li>The player gets +5 points for each extra chip.</li>
+              <li>It costs -70 points to request a chip from each player.</li>
+              <li>It costs -6 points for each chip requested.</li>
+              <li>The total score is the sum of all of these points.</li>
+            </ol>
+          </p>
+          <p>Consider the following game scenario :</p>
+          <img src="img/NoExplanation.png" width="300px" class="center" />
+
+          <p>The highlighted tiles below demonstrate the tiles the computer assistant will consider when attempting to
+            find a path from each player to the goal.</p>
+          <p>For the "ME" player the Computer Assistant will consider the following tiles :</p>
+          <img src="img/GlobalExplanationMe.png" width="300px" class="center" />
+
+          <p>For Player 1 the Computer Assistant will consider the following tiles :</p>
+          <img src="img/GlobalExplanationAgent1.png" width="300px" class="center" />
+
+          <p>For Player 2 the Computer Assistant will consider the following tiles :</p>
+          <img src="img/GlobalExplanationAgent2.png" width="300px" class="center" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="globalModalExpl" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Explanation of Computer Assistant Suggestions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will now read a short explanation of how the computer assistant comes up with possible exchange
+            suggestions.</p>
+          <p>The computer assistant compares all of the <em>shortest</em> paths and possible exchanges, between the
+            player and the goal. There are multiple shortest paths between the player and the goal and the computer
+            assistant considers all of them. It then chooses the path and possible exchanges that produce the maximum
+            scoring function while <em>always</em> reaching the target location.</p>
+          <p>It would take too long to calculate <em>all</em> of the possible paths from the players' initial position
+            to the goal so the computer assistant only considers <em>all</em> of the paths with the shortest distance
+            (there is more than one). The computer assistant also doesn't consider situations in which it might be best
+            to do nothing. This could lead to a wrong suggestion.</p>
+          <p>If a longer path exists in which there are no requests needed, and would therefore generate a higher score,
+            the computer assistant would not suggest it. Also if doing nothing is better than performing several
+            exchanges to reach the goal, the computer assistant would not suggest it.</p>
+          <p>The computer assistant calculates the path score as follows:
+            <ol>
+              <li>The player gets +150 points for reaching the goal.</li>
+              <li>The player gets +5 points for each extra chip.</li>
+              <li>It costs -70 points to request a chip from each player.</li>
+              <li>It costs -6 points for each chip requested.</li>
+              <li>The total score is the sum of all of these points.</li>
+            </ol>
+          </p>
+          <p>Consider the following game scenario :</p>
+          <img src="img/NoExplanation.png" width="300px" class="center" />
+
+          <p>The highlighted tiles below demonstrate the tiles the computer assistant will consider when attempting to
+            find a path from each player to the goal.</p>
+          <p>For the "ME" player the Computer Assistant will consider the following tiles :</p>
+          <img src="img/GlobalExplanationMe.png" width="300px" class="center" />
+
+          <p>For Player 1 the Computer Assistant will consider the following tiles :</p>
+          <img src="img/GlobalExplanationAgent1.png" width="300px" class="center" />
+
+          <p>For Player 2 the Computer Assistant will consider the following tiles :</p>
+          <img src="img/GlobalExplanationAgent2.png" width="300px" class="center" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal start experiment -->
+  <div class="modal fade" id="startModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Experiment start</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will now start the second part of the experiment. You will be shown a total of 10 games.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3><span id="game">Game 1 out of 10. </span><span id="time">Time remaining for this game: 03:00.</span></h3>
+  </div>
+  <div id="grid" class="grid"></div>
+  <div id="gridbutton_wrapper">
+    <button class="btn btn-small btn-outline-primary" id="clear_path">Clear</button>
+    <button class="btn btn-small btn-outline-primary" id="restore_path">Restore Suggestions</button>
+  </div>
+
+  <div id="suggestion_wrapper"></div>
+
+  <div id="explanation_wrapper" style="display:none"></div>
+  <div id="global_explanation" style="display:none">
+    <p>The player gets +150 points for reaching the goal.<br />
+      The player gets +5 points for each extra chip.<br />
+      It costs -70 points to request a chip from each player.<br />
+      It costs -6 points for each chip requested.<br />
+      The total score is the sum of all of these points. </p>
+  </div>
+  <!-- <button class="btn btn-small btn-outline-primary" id="global_explanation" style="display:none">Computer assistant explanation</button> -->
+  <!-- <div id="" style="display:none"></div> -->
+  <div id="local_explanation" style="display:none"></div>
+
+  <div id="wrapper_right">
+    <div id="initial_chips_wrapper">
+      <h3>Initial chip distribution</h3>
+      <div id="initial_chips"></div>
+    </div>
+
+    <hr />
+
+    <div id="gamestate_wrapper">
+      <h3>Path guidance</h3>
+      <div id="gamestate">
+        <table id="gamestate_table">
+          <tr>
+            <th class="td_player">Player</th>
+            <th class="td_success">Success</th>
+            <th class="td_nrplayersrequested">Number players requested*</th>
+            <th class="td_neededchips">Requested chips</th>
+            <th class="td_extrachips">Extra chips</th>
+            <th class="td_score">Score</th>
+          </tr>
+        </table>
+        * = Number of players which this player has requested chips from.
+      </div>
+      <div id="showpaths_wrapper"></div>
+    </div>
+
+    <hr />
+
+    <div id="trade_wrapper">
+      <h3 id="trade_header">My Chip Trade Request</h3>
+      <div id="trade"></div>
+    </div>
+
+    <div id="next">
+      <textarea id="next_text" cols="40" placeholder="Please explain your choice."></textarea>
+      <button id="next_btn" class="btn btn-success">Done</button>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <!-- TODO get jquery local -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/initial_grid.js"></script>
+  <script src="js/color_grid.js"></script>
+  <script src="js/color_trade.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

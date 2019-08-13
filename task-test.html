@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+  <!-- Modal containing global explanation -->
+  <div class="modal fade" id="evalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Game evaluation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will now begin the evaluation session. You will be presented with four small-scale scenarios which you will have to answer correctly in order to
+            proceed. Your task is to achieve the highest score possible.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3><span id="game">Test game 1 out of 4. </span><span id="time">Time remaining for this game: 03:00.</span></h3>
+  </div>
+  <div id="grid" class="grid"></div>
+  <div id="gridbutton_wrapper">
+    <button class="btn btn-small btn-outline-primary" id="clear_path">Clear</button>
+    <button class="btn btn-small btn-outline-primary" id="restore_path">Restore Suggestions</button>
+  </div>
+
+  <div id="suggestion_wrapper"></div>
+
+  <div id="wrapper_right">
+    <div id="initial_chips_wrapper">
+      <h3>Initial chip distribution</h3>
+      <div id="initial_chips"></div>
+    </div>
+
+    <hr />
+
+    <div id="gamestate_wrapper">
+      <h3>Path guidance</h3>
+      <div id="gamestate">
+        <table id="gamestate_table">
+          <tr>
+            <th class="td_player">Player</th>
+            <th class="td_success">Success</th>
+            <th class="td_nrplayersrequested">Number players requested*</th>
+            <th class="td_neededchips">Requested chips</th>
+            <th class="td_extrachips">Extra chips</th>
+            <th class="td_score">Score</th>
+          </tr>
+        </table>
+        * = Number of players which this player has requested chips from.
+      </div>
+      <div id="showpaths_wrapper"></div>
+    </div>
+
+    <hr />
+
+    <div id="trade_wrapper">
+      <h3 id="trade_header">My Chip Trade Request</h3>
+      <div id="trade"></div>
+    </div>
+
+    <div id="next">
+      <textarea id="next_text" cols="40" placeholder="Please explain your choice."></textarea>
+      <button id="next_btn" class="btn btn-success">Done</button>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <!-- TODO get jquery local -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/initial_grid.js"></script>
+  <script src="js/color_grid.js"></script>
+  <script src="js/color_trade.js"></script>
+  <script src="js/main_test.js"></script>
+</body>
+
+</html>

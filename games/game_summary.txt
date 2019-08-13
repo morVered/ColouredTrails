@@ -1,0 +1,77 @@
+Five colours, 1 Human agent and 3 Computer agents. Board size 10 X 10. 
+
+Three possible mistakes :
+1) There is a better suggestion outside of the bounding box for the ME player. 
+2) There is a better suggestion outside of the bounding box for another player which effects the ME player.
+3) It is better to do nothing than take the expensive suggested path. 
+
+
+4 games in which the IA suggestions are correct. 
+	2 of them get directly to the goal. (4) (9)
+	2 of them require exchanges. (5) (7)
+6 games in which the IA suggestions are incorrect. 
+	- Two where the ME player asks another player for a chip but that player has a better path which includes that chip. 
+		One in which it is better to ask for nothing. (8)
+		One in which a different path and request can be made. (1)
+	- Two where there is a better path outside the grid for the ME player. 
+		One where there is a better path that requires no exchange. (2)
+		One where there is a better path outside the grid that only requires one exchange. (3)
+	- Two where there is no better path and it is best to do nothing. 
+		(6)
+
+
+
+Games in which the IAs suggestions are correct : 
+
+
+Game index 4. Ask for nothing. 
+
+Game index 5. Ask Agent 1 for 1 red chip. 
+
+Game index 7. Ask Agent 1 for 1 blue chip. (Although Agent 1 has a better path but it doesn't alter its ability to lend me a chip. )
+
+Game index 9. Ask for nothing.
+
+
+Games in which the IAs suggestions are incorrect :
+
+
+Game index 1. Player3HasBetterPathWithNoRequests_MEPlayerHasDifferentRequest
+The AI suggests asking Player 3 for one red chip for a score of 150-76+7*5=109. And for player 3 suggests asking Player 2 for 2 blue chips for a score of 123. 
+Player 3 has a better path that requires no chip requests for a score of 165 (150+3*5). 
+1,8 2,8 2,7 3,7 3,6 3,5 4,5 5,5 6,5 6,6 6,7 7,7 7,8.
+The best path for the ME player is to take the following path and ask for a yellow chip. For a score of 150-76+5*5=99
+2,4 2,5 2,6 3,6 4,6 5,6 5,5 6,5 7,5 7,6 7,7 7,8
+
+Game index 2. BetterPathInsideFirstThenOutsideGrid_NoChipRequestNeeded
+The AI suggests asking Player 1 for one green chip for a score of 150-76+9*5=119
+There is a better path starting on the side the grid and then going outside that requires no chip exchanges. 
+Final score = 150 + 5*4 = 170
+1,7 2,7 2,8 3,8 4,8 4,7 5,7 6,7 6,6 6,5 6,4 5,4
+
+Game index 3. BetterPathInsideAndOutside_OnlyOneChipRequestNotTwo
+The AI suggets asking Player 2 for one green and Player 3 for one green. For a score of 150-76-76+5*9= 43
+There is a better path with only one request needed for a score of 150-76+5*6= 104
+0,0 0,1 0,2 1,2 1,3 2,3 3,3 4,3 5,3 6,3 6,2
+
+Game index 6. BetterDoNothingThanTwoChipRequests.
+The AI suggests asking two different players for two different chips. Better to do nothing. 
+
+Game index 8.Player3HasBetterPathWithNoRequests_BetterDoNothing 
+Player 3 has better path which goes around the green and therefore no requests. Uses the white and therefore only has 1 white to give. For a score of 180. 
+It is better for the ME player to do nothing for a score of 75
+
+Game index 10. BetterDoNothingThanTwoChipRequests.
+The AI suggests asking two different players for two different chips. Better to do nothing. 
+
+
+
+
+
+
+
+Game index 11. The AI suggests asking for 2 blue chips. 
+There is a better path with only one request : 0,1 1,1 2,1 3,1 4,1 4,2 5,2 5,3 5,4 5,5 5,6 5,7 6,7 7,7 8,7 9,7 9,6
+Then only needs one blue request. 
+
+

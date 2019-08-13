@@ -1,0 +1,10 @@
+1 99 AI_wrong Player3HasBetterPathWithNoRequests_MEPlayerHasDifferentRequest
+2 170 AI_wrong BetterPathInsideFirstThenOutsideGrid_NoChipRequestNeeded
+3 104 AI_wrong BetterPathInsideAndOutside_OnlyOneChipRequestNotTwo
+4 165 AI_correct _
+5 109 AI_correct _
+6 75 AI_wrong BetterDoNothingThanTwoChipRequests
+7 79 AI_correct _
+8 75 Player3HasBetterPathWithNoRequests_BetterDoNothing
+9 170 AI_correct _
+10 75 AI_wrong BetterDoNothingThanTwoChipRequests

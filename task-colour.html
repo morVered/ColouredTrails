@@ -1,0 +1,201 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-spinner.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <h3 style="text-align: center;">Are you a robot ? </h3>
+
+    <div id="instructions">
+
+        <p><br /> You must answer the following five questions correctly in order to proceed. 
+        </p>
+
+        
+
+        <div id="test-one" style="display:inline">
+            <p>Mother is to daughter as father is to :<BR>
+                <input type="radio" id="test-one1" name="Mother is to daughter as father is to :" value="son" onkeydown="evaluateTest(1)" onclick="evaluateTest(1)">son<BR>
+                <input type="radio" id="test-one2" name="Mother is to daughter as father is to :" value="cabbage" onkeydown="evaluateTest(1)" onclick="evaluateTest(1)">cabbage<BR>
+                <input type="radio" id="test-one3" name="Mother is to daughter as father is to :" value="uncle" onkeydown="evaluateTest(1)" onclick="evaluateTest(1)">uncle<BR>
+                <input type="radio" id="test-one4" name="Mother is to daughter as father is to :" value="grandfather" onkeydown="evaluateTest(1)" onclick="evaluateTest(1)">grandfather<BR>
+                <input type="radio" id="test-one5" name="Mother is to daughter as father is to :" value="kitchen" onkeydown="evaluateTest(1)" onclick="evaluateTest(1)">kitchen<BR>
+            </p>
+        </div>
+
+
+
+
+        <div id="test-two" style="display:none">
+            <p>Left is to right as up is to :<BR>
+                <input type="radio" id="test-two1" name="Left is to right as up is to :" value="something" onkeydown="evaluateTest(2)" onclick="evaluateTest(2)">something<BR>
+                <input type="radio" id="test-two2" name="Left is to right as up is to :" value="cat" onkeydown="evaluateTest(2)" onclick="evaluateTest(2)">cat<BR>
+                <input type="radio" id="test-two3" name="Left is to right as up is to :" value="down" onkeydown="evaluateTest(2)" onclick="evaluateTest(2)">down<BR>
+                <input type="radio" id="test-two4" name="Left is to right as up is to :" value="left" onkeydown="evaluateTest(2)" onclick="evaluateTest(2)">left<BR>
+                <input type="radio" id="test-two5" name="Left is to right as up is to :" value="sky" onkeydown="evaluateTest(2)" onclick="evaluateTest(2)">sky<BR>
+            </p>
+        </div>
+        
+        <div id="test-three" style="display:none">
+            <p>The answer to this quesion is dog. Do not answer cat, bird, brother, sister :<BR>
+                <input type="radio" id="test-three1" name="The answer to this quesion is dog. Do not answer cat, bird, brother, sister :" value="sister" onkeydown="evaluateTest(3)" onclick="evaluateTest(3)">sister<BR>
+                <input type="radio" id="test-three2" name="The answer to this quesion is dog. Do not answer cat, bird, brother, sister :" value="cat" onkeydown="evaluateTest(3)" onclick="evaluateTest(3)">cat<BR>
+                <input type="radio" id="test-three3" name="The answer to this quesion is dog. Do not answer cat, bird, brother, sister :" value="brother" onkeydown="evaluateTest(3)" onclick="evaluateTest(3)">brother<BR>
+                <input type="radio" id="test-three4" name="The answer to this quesion is dog. Do not answer cat, bird, brother, sister :" value="dog" onkeydown="evaluateTest(3)" onclick="evaluateTest(3)">dog<BR>
+                <input type="radio" id="test-three5" name="The answer to this quesion is dog. Do not answer cat, bird, brother, sister :" value="bird" onkeydown="evaluateTest(3)" onclick="evaluateTest(3)">bird<BR>
+            </p>
+
+        </div>
+
+        <div id="test-four" style="display:none">
+            <p>The answer to five plus five is :<BR>
+                <input type="radio" id="test-four1" name="The answer to five plus five is :" value="twenty" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">twenty<BR>
+                <input type="radio" id="test-four2" name="The answer to five plus five is :" value="thirty" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">thirty<BR>
+                <input type="radio" id="test-four3" name="The answer to five plus five is :" value="ten" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">ten<BR>
+                <input type="radio" id="test-four4" name="The answer to five plus five is :" value="zero" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">zero<BR>
+                <input type="radio" id="test-four5" name="The answer to five plus five is :" value="five" onkeydown="evaluateTest(4)" onclick="evaluateTest(4)">five<BR>
+            </p>
+        </div>
+
+        <div id="test-five" style="display:none">
+            <p>The number directly following three is : <BR>
+                <input type="radio" id="test-five1" name="The number directly following three is : " value="four" onkeydown="evaluateTest(5)" onclick="evaluateTest(5)">four<BR>
+                <input type="radio" id="test-five2" name="The number directly following three is : " value="three" onkeydown="evaluateTest(5)" onclick="evaluateTest(5)">three<BR>
+                <input type="radio" id="test-five3" name="The number directly following three is : " value="one" onkeydown="evaluateTest(5)" onclick="evaluateTest(5)">one<BR>
+                <input type="radio" id="test-five4" name="The number directly following three is : " value="zero" onkeydown="evaluateTest(5)" onclick="evaluateTest(5)">zero<BR>
+                <input type="radio" id="test-five5" name="The number directly following three is : " value="five" onkeydown="evaluateTest(5)" onclick="evaluateTest(5)">five<BR>
+            </p>
+        </div>
+
+        <div id="next_page" style="display:none">
+            <p>You have successfully completed the test. <a id="task_instructions_link" href="task-instructions-no.html">Please click here to proceed</a>.</p>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- TODO get jquery local -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/countdowntimer.js"></script>
+
+    <script>
+        function startTest() {
+            document.getElementById("startTestBtn").style.visibility = "hidden";
+            document.getElementById("empty-box").style.display = "none";
+            document.getElementById("test-one").style.display = "inline";
+           // startTime("one");
+        }
+
+        function randomIntFromInterval(min, max) { // min and max included
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        
+        var incorrect = 0;
+
+        function evaluateTest(task){//, answer) {
+            //if ((task == 1 && answer == 1) || (task == 2 && answer == 3) || (task == 3 && answer == 4) || (task == 4 && answer == 3) || 
+            //(task == 5 && answer == 1)) {
+                // alert("correct");
+            if((task == 1 && document.getElementById('test-one1').checked)  || (task == 2 && document.getElementById('test-two3').checked) 
+            || (task == 3 && document.getElementById('test-three4').checked) || (task == 4 && document.getElementById('test-four3').checked) 
+            || (task == 5 && document.getElementById('test-five1').checked) ){
+                //alert("correct");
+            } else {
+                incorrect++;
+            }
+
+
+            if (task == 1) {
+                document.getElementById("test-one").style.display = "none";
+                document.getElementById("test-two").style.display = "inline";
+            }
+            if (task == 2) {
+                document.getElementById("test-two").style.display = "none";
+                document.getElementById("test-three").style.display = "inline";
+            }
+            if (task == 3) {
+                document.getElementById("test-three").style.display = "none";
+                document.getElementById("test-four").style.display = "inline";
+            }
+            if (task == 4) {
+                document.getElementById("test-four").style.display = "none";
+                document.getElementById("test-five").style.display = "inline";
+            }
+            if (task == 5) {
+                document.getElementById("test-five").style.display = "none";
+                document.getElementById("next_page").style.display = "inline";
+
+                // if nr of correct answers
+                if (incorrect > 0) {
+                    // Please enter completion code: " + completionCode() + ".";
+                    document.getElementById("next_page").children[0].textContent = "You did not pass the test, the task is now complete.";
+                } else {
+                    // Set the condition.
+                    // condition = 0;
+                    //condition = randomIntFromInterval(0, 2);
+                    
+                    //MOR at this point eveyone gets the same instructions and gets evaluated on them. No computer assistant
+                    //if(condition == 0) {
+                        document.getElementById("task_instructions_link").href = "task-instructions-no.html" + window.location.search;//+"&cond=" + qs["cond"];
+                    //} else {//Mor Vered else if condition == 1 / condition == 2
+                    //    document.getElementById("task_instructions_link").href = "task-instructions.html" + window.location.search + "&cond=" + condition;
+                    //}
+                }
+            }
+
+        }
+
+        var qs = (function(a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i)
+            {
+                var p=a[i].split('=', 2);
+                if (p.length == 1)
+                    b[p[0]] = "";
+                else
+                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        })(window.location.search.substr(1).split('&'));
+
+        function completionCode() {
+            return Math.floor(Math.random() * 90 + 10) + "0" + Math.floor(Math.random() * 90 + 10) + qs["id"] + Math.floor(Math.random() * 90 + 10) + "x";
+            // return qs["id"] + qs["gender"] + qs["genderc"] + qs["age"] + "-" + Math.floor(Math.random() * (999 - 111)) + 111;
+        }
+
+    
+    </script>
+</body>
+
+</html>
