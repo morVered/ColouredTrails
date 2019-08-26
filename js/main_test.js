@@ -350,7 +350,8 @@ function loadGame(instructions) {
             for (let player_loop = 0; player_loop < nrPlayers; player_loop++) {
                 for (let index = 1; index < suggestedTrade.length; index++) {
                     var suggested_trade_array = suggestedTrade[index].split(" ");
-                    if (player_loop == suggested_trade_array[0]) {
+                    // Players do not trade with themselves, so check that player_loop != player
+                    if (player_loop == suggested_trade_array[0] && player_loop != player) {
                         nrExchanges[player]++;
                         for (let colour_counter = 0; colour_counter < colours.length; colour_counter++) {
                             for (let index = 1; index < suggested_trade_array.length; index++) {
@@ -758,7 +759,11 @@ function chipsAligned(neededChipsPlayer) {
 
 //Update score
 function updateScore() {
+    //Chips are stored with an extra trailing space to prevent 1 to mix up with 10, for this reason the code expects a trailing space. 
+    // extraChips[currentPlayer] = extraChips[currentPlayer].trim();
     var extraChipsPlayer = extraChips[currentPlayer];
+    extraChipsPlayer = extraChipsPlayer.trim();
+
     // remove all spaces and count nr. chips
     extraChipsPlayer = extraChipsPlayer.split(" ");
     extraChipsPlayer = extraChipsPlayer.filter(function (v) { return v !== '' }).length;

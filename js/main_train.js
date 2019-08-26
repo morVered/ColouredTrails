@@ -47,7 +47,8 @@ var chipDistributions;
 
 //MOR Vered changed name from "games" to "trainGames"
 //var trainGames = [1, 2, 3, 4, 5, 6, 7, 8];
-var trainGames = [3, 3, 3, 3, 3, 3, 3, 3]
+// var trainGames = [3, 3, 3, 3, 3, 3, 3, 3]
+var trainGames = [8, 8, 8, 8, 8, 8, 8, 8]
 
 //MOR Vered added this variable
 var numOfTrainingGame = trainGames.length;
@@ -674,8 +675,8 @@ function loadGame(instructions) {
             for (let player_loop = 0; player_loop < nrPlayers; player_loop++) {
                 for (let index = 1; index < suggestedTrade.length; index++) {
                     var suggested_trade_array = suggestedTrade[index].split(" ");
-                    
-                    if (player_loop == suggested_trade_array[0]) {
+                    // Players do not trade with themselves, so check that player_loop != player
+                    if (player_loop == suggested_trade_array[0] && player_loop != player) {
                         nrExchanges[player]++;
                         for (let colour_counter = 0; colour_counter < colours.length; colour_counter++) {
                             for (let index = 1; index < suggested_trade_array.length; index++) {
@@ -690,14 +691,14 @@ function loadGame(instructions) {
                 }
             }
         }
-        console.log("Player " + player + " player Requested Chips : ");
-        console.log(playerRequestedChips)
-        requestedChips.push(playerRequestedChips);
+        //MOR VERED : commented this out as this is already read from the file. No need to push more information in. 
+        //requestedChips.push(playerRequestedChips);
 
         // extraChips[player] = extraChips[player] + " " + playerRequestedChips;
         // extraChipsOriginal[player] = extraChipsOriginal[player] + " " + playerRequestedChips;
     }
 
+    //For no computer assistant and no explanations, show nothing
     if (condition == 0) {
         extraChips = [""];
         extraChipsOriginal = [""];
@@ -766,8 +767,8 @@ function loadGame(instructions) {
     setGamestate(requestedChips, extraChips, pathScores, success);
 
     //MOR time is now 4 minutes
-    timer = startTimer(240);
-    //timer = startTimer(2400);
+    //timer = startTimer(240);
+    timer = startTimer(2400);
 
     updateLocalExplanation();
 
@@ -1090,14 +1091,16 @@ function chipsAligned(neededChipsPlayer) {
 
 //Update score
 function updateScore() {
-    extraChips[currentPlayer] = extraChips[currentPlayer].trim();
+    //Chips are stored with an extra trailing space to prevent 1 to mix up with 10, for this reason the code expects a trailing space. 
+    // extraChips[currentPlayer] = extraChips[currentPlayer].trim();
     var extraChipsPlayer = extraChips[currentPlayer];
-    // remove all spaces and count nr. chips
+    extraChipsPlayer = extraChipsPlayer.trim();
+    console.log("Niels extraChipsPlayer " + extraChipsPlayer);
+    // remove all extra spaces and count nr. chips
     extraChipsPlayer = extraChipsPlayer.split(" ");
     extraChipsPlayer = extraChipsPlayer.filter(function (v) {
         return v !== ''
     }).length;
-    // console.log("extraChipsPlayer " + extraChipsPlayer);
 
     var requestedChipsPlayer = requestedChips[currentPlayer];
     // remove all spaces and count nr. chips
@@ -1131,6 +1134,14 @@ function updateScore() {
     }
 
     score = "---";
+    console.log("updateScore method")
+    console.log(currentPlayer)
+    console.log(extraChipsPlayer)
+    console.log(extraChips[currentPlayer])
+    console.log(requestedChipsPlayer)
+    console.log(nrChipsRequested)
+    console.log(nrExchangesPlayer)
+    
 
     if (pathContainsGoal == true) {
         //check if path complete
@@ -1151,6 +1162,7 @@ function updateScore() {
     } else {
         success[currentPlayer] = 0;
         score = (5 * extraChipsPlayer) - (70 * nrExchangesPlayer) - (6 * nrChipsRequested);
+        console.log(score)
     }
 
     pathScores[currentPlayer] = parseInt(score);
@@ -1237,6 +1249,10 @@ function setGamestate(requestedChips, extraChips, pathScores, success) {
 
     console.log("setGameState method");
     console.log(nrPlayers);
+    console.log(requestedChips)
+    console.log(extraChips)
+    console.log(pathScores)
+    console.log(success)
     for (let index = 0; index < nrPlayers; index++) {
         // var neededChipsPlayer = neededChips[index];
         // neededChipsPlayer = neededChipsPlayer.split(" ");
@@ -1246,6 +1262,8 @@ function setGamestate(requestedChips, extraChips, pathScores, success) {
         //MOR VERED - TODO : why in gametrain3 the number of players requested from is not correct for player 2 and 1 
 
         var requestedChipsPlayer = requestedChips[index];
+        console.log(index)
+        console.log(requestedChipsPlayer)
         if (requestedChipsPlayer != "" && (typeof requestedChipsPlayer !== 'undefined')) {
             requestedChipsPlayer = requestedChipsPlayer.split(" ");
             requestedChipsPlayer = requestedChipsPlayer.filter(function (v) {
@@ -1415,6 +1433,8 @@ function setPaths(player, originalPaths = false) {
 
 function setTradeChips(suggestedTrades, player, nr_players) {
 //MOR VERED - TODO need to look at this method. 
+    console.log("setTradeChips method : ")
+    console.log("Player number is : " + player);
 
     // remove all current suggestions
     $("#trade").empty();
@@ -1426,6 +1446,8 @@ function setTradeChips(suggestedTrades, player, nr_players) {
     }
 
     var trade_chips = [];
+    console.log("SuggestedTrades[player]");
+    console.log(suggestedTrades[player]);
 
     // if (condition != 0) {
     var suggestedTrade = suggestedTrades[player];
