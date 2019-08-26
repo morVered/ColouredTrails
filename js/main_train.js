@@ -46,9 +46,9 @@ var chipsRequested = [];
 var chipDistributions;
 
 //MOR Vered changed name from "games" to "trainGames"
-//var trainGames = [1, 2, 3, 4, 5, 6, 7, 8];
-// var trainGames = [3, 3, 3, 3, 3, 3, 3, 3]
-var trainGames = [8, 3, 8, 8, 8, 8, 8, 8]
+var trainGames = [1, 2, 3, 4, 5, 6, 7, 8];
+//var trainGames = [3, 3, 3, 3, 3, 3, 3, 3]
+//var trainGames = [8, 3, 8, 8, 8, 8, 8, 8]
 
 //MOR Vered added this variable
 var numOfTrainingGame = trainGames.length;
@@ -193,73 +193,73 @@ function ranOutOfTime() {
         //falseAnswers = falseAnswers + 1;
         evaluation_result = "Incorrect";
         if(condition == 2 || condition == 1)
-            modalAlert("Your objective is to achieve the highest score possible. You will achieve a higher score if you do nothing. Please try again.")
+            modalAlert("Your objective is to achieve the highest score possible. You would have achieved a higher score if you had done nothing.")
         if(condition == 0)
-            modalAlert("Your objective is to achieve the highest score possible. Player 1 is using the blue chip and Player 2 is using the yellow chips. You will achieve a higher score if you do nothing. Please try again.")
-        storeProgress("wrong answer told to try again")
+            modalAlert("Your objective is to achieve the highest score possible. Player 1 was using the blue chip and Player 2 was using the yellow chips. You would have achieved a higher score if you had done nothing.")
+        storeProgress("timed out")
     }
     if (trainGames[currentGame] == 2 && pathScores[0] != 50) {
         //falseAnswers = falseAnswers + 1;
         evaluation_result = "Incorrect";
         if(condition == 2 || condition == 1)
-            modalAlert("There is a better path for player 2 that requires no chip requests. Player 2 will not be able to give the ME player a white chip. In that case you will achieve a higher score if you do nothing. Please try again.")
+            modalAlert("There was a better path for player 2 that requires no chip requests. Therefore Player 2 was not able to give the ME player a white chip. In that case you would have achieved a higher score if you had done nothing.")
         if(condition == 0)
-            modalAlert("Player 2 has a path with no chip requests that uses the white chips. Player 2 will not be able to give the ME player a white chip. In that case you will achieve a higher score if you do nothing. Please try again.")
-        storeProgress("wrong answer told to try again")
+            modalAlert("Player 2 had a path with no chip requests that used the white chips. Therefore Player 2 was not able to give the ME player a white chip. In that case you would have achieved a higher score if you had done nothing.")
+        storeProgress("timed out")
     }
     if (trainGames[currentGame] == 3 && pathScores[0] != 165) {
         //falseAnswers = falseAnswers + 1;
         evaluation_result = "Incorrect";
         if(condition == 2 || condition == 1)
-            modalAlert("There is a better path for the ME player, that requires no chip requests. Please try again.")
+            modalAlert("There was a better path for the ME player, that required no chip requests.")
         if(condition == 0)
-            modalAlert("There is a way to reach the goal with no exchanges and a score of 165.")
-        storeProgress("wrong answer told to try again")
+            modalAlert("There was a way to reach the goal with no exchanges and a score of 165.")
+        storeProgress("timed out")
     }
     if (trainGames[currentGame] == 4 && pathScores[0] != 114) {
         //falseAnswers = falseAnswers + 1;
         evaluation_result = "Incorrect";
         if(condition == 2 || condition == 1)
-            modalAlert("The AI suggestion was correct. Please try again.")//game 4
+            modalAlert("The AI suggestion was correct.")//game 4
         if(condition == 0)
-            modalAlert("There is a path that reaches the goal with one request and a score of 114. Please try again.")
-        storeProgress("wrong answer told to try again")
+            modalAlert("There was a path that reached the goal with one request and a score of 114.")
+        storeProgress("timed out")
     }
     if (trainGames[currentGame] == 5 && pathScores[0] != 170) {
         //falseAnswers = falseAnswers + 1;
         evaluation_result = "Incorrect";
         if(condition == 2 || condition == 1)
-            modalAlert("The AI suggestion was correct. Please try again.")//game 5
+            modalAlert("The AI suggestion was correct.")//game 5
         if(condition == 0)
-            modalAlert("There is a way to reach the goal with no exchanges and a score of 170.")
-        storeProgress("wrong answer told to try again")
+            modalAlert("There was a way to reach the goal with no exchanges and a score of 170.")
+        storeProgress("timed out")
     }
     if (trainGames[currentGame] == 6 && pathScores[0] != 50) {
         //falseAnswers = falseAnswers + 1;
         evaluation_result = "Incorrect";
         if(condition == 2 || condition == 1)
-            modalAlert("There is a better path for player 1 that requires no chip requests. Player 1 will not be able to give the ME player a white chip. In that case you will achieve a higher score if you do nothing. Please try again.")
+            modalAlert("There was a better path for player 1 that required no chip requests. Therefore Player 1 was not able to give the ME player a white chip. In that case you would have achieved a higher score if you had done nothing.")
         if(condition == 0)
-            modalAlert("Your objective is to achieve the highest score possible. Player 1 has a path with no chip requests that uses the white chip. Player 1 will not be able to give the ME player a white chip. In that case you will achieve a higher score if you do nothing. Please try again.")
-        storeProgress("wrong answer told to try again")
+            modalAlert("Your objective is to achieve the highest score possible. Player 1 had a path with no chip requests that used the white chip. Therefore player 1 was not able to give the ME player a white chip. In that case you would have achieved a higher score if you had done nothing.")
+        storeProgress("timed out")
     }
     if (trainGames[currentGame] == 7 && pathScores[0] != 170) {
         //falseAnswers = falseAnswers + 1;
         evaluation_result = "Incorrect";
         if(condition == 2 || condition == 1)
-            modalAlert("There is a better path for the ME player, that requires no chip requests. Please try again.")
+            modalAlert("There was a better path for the ME player that required no chip requests.")
         if(condition == 0)
-            modalAlert("There is a way to reach the goal with no exchanges and a score of 170.")
-        storeProgress("wrong answer told to try again")
+            modalAlert("There was a way to reach the goal with no exchanges and a score of 170.")
+        storeProgress("timed out")
     }
     if (trainGames[currentGame] == 8 && pathScores[0] != 50) {
         //falseAnswers = falseAnswers + 1;
         evaluation_result = "Incorrect";
         if(condition == 2 || condition == 1)
-            modalAlert("Your objective is to achieve the highest score possible. You will achieve a higher score if you do nothing. Please try again.")
+            modalAlert("Your objective is to achieve the highest score possible. You would have achieved a higher score if you had done nothing.")
         if(condition == 0)
-            modalAlert("Your objective is to achieve the highest score possible. Player 1 is using the white chip and Player 2 is using the blue chips. You will achieve a higher score if you do nothing. Please try again.")
-        storeProgress("wrong answer told to try again")
+            modalAlert("Your objective is to achieve the highest score possible. Player 1 was using the white chip and Player 2 was using the blue chips. You would have achieved a higher score if you had done nothing.")
+        storeProgress("timed out")
     }
 
     currentGame++;
@@ -292,6 +292,17 @@ function ranOutOfTime() {
         saveToFile(gameprogress);
         // empty var after saving
         gameprogress = "";
+    }else{
+        
+        saveToFile(gameprogress);
+        //MOR no matter what they continue to the games
+        timer = 0;
+        //MOR TODO will now continue directly to the game instead of the evaluation session
+        //var text = "Congratulations, you have completed the training. You will now begin the evaluation session. You must succeed in at least 3 out of 4 games in order to proceed.<br /><br /><a href=" + baseurl + "task-test.html?id=" + playerID + "&cond=" + condition + ">Begin Evaluation</a>.";
+        //modalAlert(text, footer = false);
+
+        var text = "Congratulations, you have successfully completed the training part of the experiment. You have qualified for the opportunity to earn another $2 by playing 10 more games. In each game you can earn an additional $0.2 depending on how well you do.<br /><br /><a href=" + baseurl + "application.html?id=" + playerID + "&cond=" + condition + ">Continue</a> or <a href=" + baseurl + "complete.html?id=" + playerID + "&c=" + condition + "&max=0>Stop</a>.";
+        modalAlert(text, footer = false);
     }
 
 }
@@ -768,7 +779,8 @@ function loadGame(instructions) {
 
     //MOR time is now 4 minutes
     //timer = startTimer(240);
-    timer = startTimer(2400);
+    //timer = startTimer(2400);
+    timer = startTimer(30);
 
     updateLocalExplanation();
 
