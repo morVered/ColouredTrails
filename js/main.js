@@ -1265,6 +1265,8 @@ function checkTradeChipsDown(playerRequested, chipRequested, currentSpinnerValue
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split("-1").join("");
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split(",").join(" ");
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split("  ").join(" ");
+    if (requestedChips[currentPlayer][requestedChips[currentPlayer].length -1] != " ")
+        requestedChips[currentPlayer] += " ";
 
     var counter = 0;
 

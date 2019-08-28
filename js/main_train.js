@@ -48,7 +48,7 @@ var chipDistributions;
 //MOR Vered changed name from "games" to "trainGames"
 var trainGames = [1, 2, 3, 4, 5, 6, 7, 8];
 //var trainGames = [3, 3, 3, 3, 3, 3, 3, 3]
-//var trainGames = [8, 3, 8, 8, 8, 8, 8, 8]
+
 
 //MOR Vered added this variable
 var numOfTrainingGame = trainGames.length;
@@ -779,8 +779,8 @@ function loadGame(instructions) {
 
     //MOR time is now 4 minutes
     //timer = startTimer(240);
-    //timer = startTimer(2400);
-    timer = startTimer(30);
+    timer = startTimer(2400);
+    timer = startTimer(10);
 
     updateLocalExplanation();
 
@@ -1273,7 +1273,7 @@ function setGamestate(requestedChips, extraChips, pathScores, success) {
         
         //MOR VERED - TODO : why in gametrain3 the number of players requested from is not correct for player 2 and 1 
 
-        var requestedChipsPlayer = requestedChips[index];
+        var requestedChipsPlayer = requestedChips[index].trim();
         console.log(index)
         console.log(requestedChipsPlayer)
         if (requestedChipsPlayer != "" && (typeof requestedChipsPlayer !== 'undefined')) {
@@ -1602,6 +1602,9 @@ function checkTradeChipsDown(playerRequested, chipRequested, currentSpinnerValue
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split("-1").join("");
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split(",").join(" ");
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split("  ").join(" ");
+    if (requestedChips[currentPlayer][requestedChips[currentPlayer].length -1] != " ")
+        requestedChips[currentPlayer] += " ";
+
 
     var counter = 0;
 
