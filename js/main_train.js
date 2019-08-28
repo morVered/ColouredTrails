@@ -778,9 +778,9 @@ function loadGame(instructions) {
     setGamestate(requestedChips, extraChips, pathScores, success);
 
     //MOR time is now 4 minutes
-    //timer = startTimer(240);
-    timer = startTimer(2400);
-    timer = startTimer(10);
+    timer = startTimer(240);
+    //timer = startTimer(2400);
+    //timer = startTimer(10);
 
     updateLocalExplanation();
 
