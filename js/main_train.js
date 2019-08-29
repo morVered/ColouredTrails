@@ -46,8 +46,8 @@ var chipsRequested = [];
 var chipDistributions;
 
 //MOR Vered changed name from "games" to "trainGames"
-var trainGames = [1, 2, 3, 4, 5, 6, 7, 8];
-//var trainGames = [3, 3, 3, 3, 3, 3, 3, 3]
+//var trainGames = [1, 2, 3, 4, 5, 6, 7, 8];
+var trainGames = [6, 6, 6, 6, 6,6,6,6,6,6];
 
 
 //MOR Vered added this variable
@@ -1178,7 +1178,10 @@ function updateScore() {
     }
 
     pathScores[currentPlayer] = parseInt(score);
+    console.log("updatescore method, requested chips")
+    console.log(requestedChips);
     setGamestate(requestedChips, extraChips, pathScores, success);
+    console.log(requestedChips);
 }
 
 function setTarget(i, j) {
@@ -1548,6 +1551,9 @@ function setTradeChips(suggestedTrades, player, nr_players) {
 }
 
 function checkTradeChips(playerRequested, chipRequested, currentSpinnerValue) {
+    console.log("At the beginning of checkTradeChips method, requested Chips ");
+    console.log(requestedChips);
+
     // alert("HI" + playerRequested + " " + chipRequested);
     currentSpinnerValue = parseInt(currentSpinnerValue);
     // what extra chip does player X have?    
@@ -1593,15 +1599,22 @@ function checkTradeChips(playerRequested, chipRequested, currentSpinnerValue) {
         // Add to player's extra chips
         extraChips[currentPlayer] += " " + chipRequested + " ";
         // Add to player's requested chips
-        requestedChips[currentPlayer] += " " + chipRequested + "  ";
+        //TB: remove double space:
+        requestedChips[currentPlayer] += " " + chipRequested + " ";
         return (currentSpinnerValue + 1);
     }
 }
 
 function checkTradeChipsDown(playerRequested, chipRequested, currentSpinnerValue) {
+    console.log("At the beginning of checkTradeChipsDown method, requested Chips ");
+    console.log(requestedChips);
+    console.log("chipRequested is :");
+    console.log(chipRequested);
+    
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split("-1").join("");
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split(",").join(" ");
     requestedChips[currentPlayer] = requestedChips[currentPlayer].toString().split("  ").join(" ");
+    //For debugging purposes, make sure a single space is added at the end
     if (requestedChips[currentPlayer][requestedChips[currentPlayer].length -1] != " ")
         requestedChips[currentPlayer] += " ";
 
@@ -1633,6 +1646,8 @@ function checkTradeChipsDown(playerRequested, chipRequested, currentSpinnerValue
         }
     }
 
+
+
     if (counter >= currentSpinnerValue) {
         modalAlert("You need that chip for the path marked on the board. Click the cell to remove it before making this trade request.");
         storeProgress("ChipRequest min:;From;" + playerRequested + ";Colour;" + chipRequested + ";ReqNrOfChips;" + (currentSpinnerValue - 1) + ";Success;0");
@@ -1641,8 +1656,13 @@ function checkTradeChipsDown(playerRequested, chipRequested, currentSpinnerValue
         // Remove from player's extra chips
         // extraChips[currentPlayer] = extraChips[currentPlayer].replace((chipRequested + 1) + " ", "");
         // Remove from player's requested chips
-        requestedChips[currentPlayer] = requestedChips[currentPlayer].replace((chipRequested + 1) + " ", "");
-        extraChips[currentPlayer] = extraChips[currentPlayer].replace((chipRequested + 1) + " ", "");
+        console.log(requestedChips)
+        //bug fix; there is an extra hidden charachter in the middle we need to get rid of. 
+        var toreplace = (chipRequested + 1).toString().trim() + " ";
+        var newval = toreplace.replace(toreplace, '');
+        requestedChips[currentPlayer] = newval;
+
+        extraChips[currentPlayer] = extraChips[currentPlayer].replace((chipRequested + 1) + ' ', '',true);
         storeProgress("ChipRequest min:;From;" + playerRequested + ";Colour;" + chipRequested + ";ReqNrOfChips;" + (currentSpinnerValue - 1) + ";Success;1");
         return (currentSpinnerValue - 1);
     }

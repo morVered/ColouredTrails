@@ -47,11 +47,16 @@
         $row = $('<div></div>').appendTo(this.$placeholder);
 
         for (j = 0; j < this.colsCount; j += 1) {
-          // console.log("final values : " + this.trade_chips);
+          console.log("color_trade.js :")
+          console.log("final values : " + this.trade_chips);
+          console.log(this.trade_chips);
+          console.log(j);
           
           // $cell = $('<div class="cell-colour cell-' + colours[j] + '">' + this.colour_chips[this.player][j] + '</div>').appendTo($row);
           // checkTradeChips('+this.player+','+j+','+el.value+')
           $cell = $('<span class="spinner"><i class="fa fa-chevron-up" onclick="var el = $(this).siblings('+"'"+'div'+"'"+').children('+"'"+'input'+"'"+')[0]; el.value = Math.min(spin_max, parseInt(checkTradeChips('+this.player+','+j+',el.value)));updatedTradeChips();"></i><i class="fa fa-chevron-down" onclick="var el = $(this).siblings('+"'"+'div'+"'"+').children('+"'"+'input'+"'"+')[0]; el.value = Math.max(spin_min, parseInt(checkTradeChipsDown('+this.player+','+j+',el.value)));updatedTradeChips();"></i>' + '<div class="cell-colour cell-' + colours[j] + '"><input disabled type="text" name="value" value="' + this.trade_chips[this.player][j] + '"></div></span>').appendTo($row);
+          console.log("cell");
+          console.log(cell);
           cell = this.createCell({$element: $cell, x: j, y: i});
           this.grid[i].push(cell);
           this.cells.push(cell);

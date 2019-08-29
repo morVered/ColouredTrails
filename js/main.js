@@ -1303,7 +1303,12 @@ function checkTradeChipsDown(playerRequested, chipRequested, currentSpinnerValue
         // Remove from player's extra chips
         // extraChips[currentPlayer] = extraChips[currentPlayer].replace((chipRequested + 1) + " ", "");
         // Remove from player's requested chips
-        requestedChips[currentPlayer] = requestedChips[currentPlayer].replace((chipRequested + 1) + " ", "");
+        //bug fix; there is an extra hidden charachter in the middle we need to get rid of. 
+        //requestedChips[currentPlayer] = requestedChips[currentPlayer].replace((chipRequested + 1) + " ", "");
+        var toreplace = (chipRequested + 1).toString().trim() + " ";
+        var newval = toreplace.replace(toreplace, '');
+        requestedChips[currentPlayer] = newval;
+
         extraChips[currentPlayer] = extraChips[currentPlayer].replace((chipRequested + 1) + " ", "");
         storeProgress("ChipRequest min:;From;" + playerRequested + ";Colour;" + chipRequested + ";ReqNrOfChips;" + (currentSpinnerValue - 1) + ";Success;1");
         return (currentSpinnerValue - 1);
