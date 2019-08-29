@@ -1311,8 +1311,16 @@ function checkTradeChipsDown(playerRequested, chipRequested, currentSpinnerValue
         // Remove from player's requested chips
         //bug fix; there is an extra hidden charachter in the middle we need to get rid of. 
         //requestedChips[currentPlayer] = requestedChips[currentPlayer].replace((chipRequested + 1) + " ", "");
+        var newString;
+        if(requestedChips[currentPlayer].length == 3){
+            newString = requestedChips[currentPlayer][0] + requestedChips[currentPlayer][2];
+        }
+        else
+            newString = requestedChips[currentPlayer];
+        //bug fix; there is an extra hidden charachter in the middle we need to get rid of. 
         var toreplace = (chipRequested + 1).toString().trim() + " ";
-        var newval = toreplace.replace(toreplace, '');
+        //var newval = toreplace.replace(toreplace, '');
+        var newval = newString.replace(toreplace, '');
         requestedChips[currentPlayer] = newval;
 
         extraChips[currentPlayer] = extraChips[currentPlayer].replace((chipRequested + 1) + " ", "");
