@@ -288,7 +288,7 @@ function ranOutOfTime() {
                 }
             }
         }
-        rawFile.send(null);
+        //rawFile.send(null);
         saveToFile(gameprogress);
         // empty var after saving
         gameprogress = "";
@@ -412,7 +412,7 @@ function nextGame() {
                     }
                 }
             }
-            rawFile.send(null);
+            //rawFile.send(null);
             saveToFile(gameprogress);
             // empty var after saving
             gameprogress = "";
@@ -602,7 +602,7 @@ function readTextFile(file) {
         }
     }
     storeProgress("Read new file");
-    rawFile.send(null);
+    //rawFile.send(null);
     // }
 }
 
@@ -618,7 +618,7 @@ function readScoreFile() {
         }
     }
     storeProgress("Read score file");
-    rawFile.send(null);
+    //rawFile.send(null);
 }
 
 function loadScores(scores) {
