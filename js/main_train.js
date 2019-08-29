@@ -288,7 +288,7 @@ function ranOutOfTime() {
                 }
             }
         }
-        //rawFile.send(null);
+        rawFile.send(null);
         saveToFile(gameprogress);
         // empty var after saving
         gameprogress = "";
@@ -412,7 +412,7 @@ function nextGame() {
                     }
                 }
             }
-            //rawFile.send(null);
+            rawFile.send(null);
             saveToFile(gameprogress);
             // empty var after saving
             gameprogress = "";
@@ -602,7 +602,7 @@ function readTextFile(file) {
         }
     }
     storeProgress("Read new file");
-    //rawFile.send(null);
+    rawFile.send(null);
     // }
 }
 
@@ -618,7 +618,7 @@ function readScoreFile() {
         }
     }
     storeProgress("Read score file");
-    //rawFile.send(null);
+    rawFile.send(null);
 }
 
 function loadScores(scores) {
@@ -1657,11 +1657,12 @@ function checkTradeChipsDown(playerRequested, chipRequested, currentSpinnerValue
         // extraChips[currentPlayer] = extraChips[currentPlayer].replace((chipRequested + 1) + " ", "");
         // Remove from player's requested chips
         console.log(requestedChips)
+
         //bug fix; there is an extra hidden charachter in the middle we need to get rid of. 
         var toreplace = (chipRequested + 1).toString().trim() + " ";
         var newval = toreplace.replace(toreplace, '');
         requestedChips[currentPlayer] = newval;
-
+        
         extraChips[currentPlayer] = extraChips[currentPlayer].replace((chipRequested + 1) + ' ', '',true);
         storeProgress("ChipRequest min:;From;" + playerRequested + ";Colour;" + chipRequested + ";ReqNrOfChips;" + (currentSpinnerValue - 1) + ";Success;1");
         return (currentSpinnerValue - 1);
