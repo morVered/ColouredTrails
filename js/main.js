@@ -352,9 +352,11 @@ function loadGame(instructions) {
     extraChips = lines.slice(13 + rows + nrGoals + (nrComputerPlayers * 5) - 1, 13 + rows + nrGoals + (nrComputerPlayers * 6));
     extraChipsOriginal = lines.slice(13 + rows + nrGoals + (nrComputerPlayers * 5) - 1, 13 + rows + nrGoals + (nrComputerPlayers * 6));
     pathScores = lines.slice(14 + rows + nrGoals + (nrComputerPlayers * 6) - 1, 14 + rows + nrGoals + (nrComputerPlayers * 7));
+    console.log(pathScores);
     success = lines.slice(15 + rows + nrGoals + (nrComputerPlayers * 7) - 1, 15 + rows + nrGoals + (nrComputerPlayers * 8));
     // trades = lines.slice(16 + rows + nrGoals + (nrComputerPlayers * 8) - 1, 16 + rows + nrGoals + (nrComputerPlayers * 9));
     suggestedTrades = lines.slice(16 + rows + nrGoals + (nrComputerPlayers * 8) - 1, 16 + rows + nrGoals + (nrComputerPlayers * 9));
+    console.log(suggestedTrades);
     suggestedTradesOriginal = lines.slice(16 + rows + nrGoals + (nrComputerPlayers * 8) - 1, 16 + rows + nrGoals + (nrComputerPlayers * 9));
 
 
@@ -457,6 +459,8 @@ function loadGame(instructions) {
     setSuggestions(suggestedTrades);
     updatedTradeChips();
 
+    console.log(pathScores);
+    console.log("BeforeSetGameState");
     setGamestate(requestedChips, extraChips, pathScores, success);
 
     timer = startTimer(180);
@@ -957,6 +961,8 @@ function setGamestate(requestedChips, extraChips, pathScores, success) {
         extraChipsPlayer = extraChipsPlayer.filter(function (v) { return v !== '' });
 
         var pathScoresPlayer = parseInt(pathScores[index]);
+        console.log("Path score for player "+ index);
+        console.log(pathScoresPlayer)
         // var success = successPlayer.split(" ");
         var successPlayer = success[index];
 

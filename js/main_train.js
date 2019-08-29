@@ -46,8 +46,8 @@ var chipsRequested = [];
 var chipDistributions;
 
 //MOR Vered changed name from "games" to "trainGames"
-//var trainGames = [1, 2, 3, 4, 5, 6, 7, 8];
-var trainGames = [6, 6, 6, 6, 6,6,6,6,6,6];
+var trainGames = [1, 2, 3, 4, 5, 6, 7, 8];
+//var trainGames = [6, 6, 6, 6, 6,6,6,6,6,6];
 
 
 //MOR Vered added this variable
