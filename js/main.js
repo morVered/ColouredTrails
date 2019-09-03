@@ -279,9 +279,33 @@ function storeProgress(action) {
         stringCondition = "globalEx";
     }
 
-    var chipsRequestedPlayer = "P0:" + player0Trades + ";P1:" + player1Trades + ";P2:" + player2Trades + ";P3:" + player3Trades + ";P4:" + player4Trades + ";P5:" + player5Trades;
+    //var chipsRequestedPlayer = "P0:" + player0Trades + ";P1:" + player1Trades + ";P2:" + player2Trades + ";P3:" + player3Trades + ";P4:" + player4Trades + ";P5:" + player5Trades;
 
-    gameprogress += playerID + "," + stringCondition + "," + games[currentGame] + "," + currentGame + "," + (new Date).getTime() + "," + currentPlayer + "," + action + "," + chipsRequested + "," + chipsRequestedPlayer + "," + extraChips[currentPlayer] + "," + requestedChips[currentPlayer] + "," + parseInt(pathScores[currentPlayer]) + "," + timeRemaining + "\n";
+    //gameprogress += playerID + "," + stringCondition + "," + games[currentGame] + "," + currentGame + "," + (new Date).getTime() + "," + currentPlayer + "," + action + "," + chipsRequested + "," + chipsRequestedPlayer + "," + extraChips[currentPlayer] + "," + requestedChips[currentPlayer] + "," + parseInt(pathScores[currentPlayer]) + "," + timeRemaining + "\n";
+
+    var chipsRequestedPlayer;
+    
+    if(nrPlayers==2)
+        chipsRequestedPlayer = "P0:" + player0Trades + ";P1:" + player1Trades;
+    else if(nrPlayers==3)
+        chipsRequestedPlayer = "P0:" + player0Trades + ";P1:" + player1Trades + ";P2:" + player2Trades;
+    else if (nrPlayers==4)
+        chipsRequestedPlayer = "P0:" + player0Trades + ";P1:" + player1Trades + ";P2:" + player2Trades + ";P3:" + player3Trades;
+    else if (nrPlayers==5)
+        chipsRequestedPlayer = "P0:" + player0Trades + ";P1:" + player1Trades + ";P2:" + player2Trades + ";P3:" + player3Trades + ";P4:" + player4Trades;
+    else
+        chipsRequestedPlayer = "P0:" + player0Trades + ";P1:" + player1Trades + ";P2:" + player2Trades + ";P3:" + player3Trades + ";P4:" + player4Trades + ";P5:" + player5Trades;
+
+    var i;
+    var scoresAllPlayers ="";
+    for(i=0;i<nrPlayers;i++){
+        scoresAllPlayers += "P" + i +":" + pathScores[i] + ";";
+    }
+    //gameprogress += playerID + "," + stringCondition + "," + trainGames[currentGame] + "," + currentGame + "," + (new Date).getTime() + "," + currentPlayer + "," + action + "," + chipsRequested + "," + chipsRequestedPlayer + "," + extraChips[currentPlayer] + "," + requestedChips[currentPlayer] + "," + parseInt(pathScores[currentPlayer]) + "," + timeRemaining + "\n";
+    //console.log(gameprogress);
+    gameprogress += playerID + "," + stringCondition + "," + trainGames[currentGame] + "," + currentGame + "," + (new Date).getTime() + "," + currentPlayer + "," + action + "," + chipsRequested + "," + chipsRequestedPlayer + "," + extraChips[currentPlayer] + "," + requestedChips[currentPlayer] + "," + scoresAllPlayers + "," + timeRemaining + "\n";
+    console.log(gameprogress)
+
 }
 
 function readTextFile(file) {
