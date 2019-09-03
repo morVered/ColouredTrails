@@ -301,9 +301,9 @@ function storeProgress(action) {
     for(i=0;i<nrPlayers;i++){
         scoresAllPlayers += "P" + i +":" + pathScores[i] + ";";
     }
-    //gameprogress += playerID + "," + stringCondition + "," + trainGames[currentGame] + "," + currentGame + "," + (new Date).getTime() + "," + currentPlayer + "," + action + "," + chipsRequested + "," + chipsRequestedPlayer + "," + extraChips[currentPlayer] + "," + requestedChips[currentPlayer] + "," + parseInt(pathScores[currentPlayer]) + "," + timeRemaining + "\n";
+    //gameprogress += playerID + "," + stringCondition + "," + games[currentGame] + "," + currentGame + "," + (new Date).getTime() + "," + currentPlayer + "," + action + "," + chipsRequested + "," + chipsRequestedPlayer + "," + extraChips[currentPlayer] + "," + requestedChips[currentPlayer] + "," + parseInt(pathScores[currentPlayer]) + "," + timeRemaining + "\n";
     //console.log(gameprogress);
-    gameprogress += playerID + "," + stringCondition + "," + trainGames[currentGame] + "," + currentGame + "," + (new Date).getTime() + "," + currentPlayer + "," + action + "," + chipsRequested + "," + chipsRequestedPlayer + "," + extraChips[currentPlayer] + "," + requestedChips[currentPlayer] + "," + scoresAllPlayers + "," + timeRemaining + "\n";
+    gameprogress += playerID + "," + stringCondition + "," + games[currentGame] + "," + currentGame + "," + (new Date).getTime() + "," + currentPlayer + "," + action + "," + chipsRequested + "," + chipsRequestedPlayer + "," + extraChips[currentPlayer] + "," + requestedChips[currentPlayer] + "," + scoresAllPlayers + "," + timeRemaining + "\n";
     console.log(gameprogress)
 
 }
