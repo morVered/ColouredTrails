@@ -1,8 +1,8 @@
 // var baseurl = "https://nielsvanberkel.com/files/CT3/";
 //MOR VERED make sure this points to the base URL
 //var baseurl = "http://23.20.117.83/";
-var baseurl = "http://localhost:3474/";
-//var baseurl = "/web/";
+//var baseurl = "http://localhost:3474/";
+var baseurl = "/web/";
 
 // Avoid `console` errors in browsers that lack a console.
 (function () {
