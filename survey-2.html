@@ -221,9 +221,10 @@
 
         function saveToFile(data) {
             jsonString = String(data);
+            filename = 'surveys' + playerID + '.csv';
             jQuery.ajax({
                 url: baseurl + '/savesurvey.php',
-                data: { 'jsonString': jsonString },
+                data: { 'jsonString': jsonString, 'filename':this.filename },
                 type: 'POST'
             });
         }

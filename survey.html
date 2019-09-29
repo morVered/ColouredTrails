@@ -220,9 +220,10 @@
 
         function saveToFile(data) {
             jsonString = String(data);
+            filename = 'surveys' + playerID + '.csv';
             jQuery.ajax({
                 url: baseurl + '/savesurvey.php',
-                data: { 'jsonString': jsonString },
+                data: { 'jsonString': jsonString, 'filename':this.filename },
                 type: 'POST'
             });
         }
@@ -354,7 +355,7 @@
 
             if(condition == 0 || condition == 1) {
                 window.location.href = baseurl + "complete.html" + "?id=" + playerID + "&c=" + condition + "&m=" + maxScoreGames;
-            } else {
+            } else { //for condition two ask also explanation satisfaction
                 window.location.href = baseurl + "survey-2.html" + "?id=" + playerID + "&c=" + condition + "&m=" + maxScoreGames;
             }
         }

@@ -77,6 +77,7 @@ function onDocLoaded() {
 
     reset();
 
+
     shuffleArray(games);
     // alert("Starting with game " + games[0]);
     var game = baseurl + 'games/game' + games[0] + '.txt';
@@ -175,13 +176,16 @@ function nextGame() {
     } else {
         saveToFile(gameprogress);
 
-        if (condition == 0) {
-            window.location.href = baseurl + "complete.html" + "?id=" + playerID + "&c=" + condition + "&m=" + maxScoreGames;
-        } else {
-            window.location.href = baseurl + "survey.html" + "?id=" + playerID + "&c=" + condition + "&m=" + maxScoreGames;
+        //if (condition == 0) {
+       //     window.location.href = baseurl + "complete.html" + "?id=" + playerID + "&c=" + condition + "&m=" + maxScoreGames;
+        //} else {
+         //   window.location.href = baseurl + "survey.html" + "?id=" + playerID + "&c=" + condition + "&m=" + maxScoreGames;
+
+         window.location.href = baseurl + "survey-task-load.html" + "?id=" + playerID + "&c=" + condition + "&m=" + maxScoreGames;
+        
         }
     }
-}
+
 
 function storeProgress(action) {
     // remove any commas and additional spaces.
@@ -695,6 +699,7 @@ function clickedCell(i, j) {
 
         if (addPath) {
             storeProgress("Added cell " + i + "-" + j + "-" + haveChip);
+            console.log("Added cell " + i + "-" + j + "-" + haveChip)
         } else {
             storeProgress("Removed cell " + i + "-" + j + "-" + haveChip);
             // REMOVE PATH HERE
@@ -1650,9 +1655,13 @@ function reset() {
 
 function saveToFile(data) {
     jsonString = String(data);
+    filename = playerID + '.csv';
+
     jQuery.ajax({
-        url: baseurl + '/saveactions.php',
-        data: { 'jsonString': jsonString },
-        type: 'POST'
-    });
+    url: baseurl + '/saveactions.php',
+    data: { 'jsonString': jsonString, 'filename':this.filename },
+    type: 'POST'
+});
+
+
 }

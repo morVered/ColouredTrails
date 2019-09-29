@@ -1,0 +1,100 @@
+MorVeredSecondAttempt,InstructionQuestions,1,1,1,1,1,1,1,1,0,0
+MorVeredSecondAttempt,InstructionQuestions,1,1,1,1,1,1,1,1,1,0
+MorVeredSecondAttempt,InstructionQuestions,1,1,1,1,1,1,1,1,1,0
+MorVeredSecondAttempt,InstructionQuestions,0,0,0,0,0,0,0,0,0,1
+MorVeredSecondAttempt,InstructionQuestions,1,1,1,1,1,1,1,1,1,1
+
+MorVeredSecondAttempt,2,3,0,1568938386191,0,Read score file,,P0:;P1:;P2:;P3:;P4:;P5:,-,,,undefined:undefined
+MorVeredSecondAttempt,2,3,0,1568938395206,0,Read new file,,P0:;P1:;P2:;P3:;P4:;P5:,-,,,undefined:undefined
+MorVeredSecondAttempt,2,3,0,1568938395225,0,Starting new game,0,P0:;P1:0;;P2:,3 3 2 2 4 4,1,P0:104;P1:185.0;P2:190.0;,undefined:undefined
+MorVeredSecondAttempt,2,3,0,1568938396337,0,Removed cell 3-2-false,0,P0:;P1:0;;P2:,3 3 2 2 4 4 1 ,1,P0:-41;P1:185.0;P2:190.0;,04:00
+MorVeredSecondAttempt,2,3,0,1568938396800,0,Added cell 4-1-true,0,P0:;P1:0;;P2:,3 3 2 2 4 1 ,1,P0:-46;P1:185.0;P2:190.0;,04:00
+MorVeredSecondAttempt,2,3,0,1568938397088,0,Added cell 3-1-true,0,P0:;P1:0;;P2:,3 3 2 4 1 ,1,P0:-51;P1:185.0;P2:190.0;,04:00
+MorVeredSecondAttempt,2,3,0,1568938397432,0,Added cell 2-1-true,0,P0:;P1:0;;P2:,3 3 4 1 ,1,P0:94;P1:185.0;P2:190.0;,03:59
+MorVeredSecondAttempt,2,3,0,1568938398119,0,ChipRequest min:;From;1;Colour;0;ReqNrOfChips;0;Success;1,0,P0:;P1:0;;P2:,3 3 4 ,,P0:94;P1:185.0;P2:190.0;,03:59
+MorVeredSecondAttempt,2,3,0,1568938408911,0,Motivation: training session 1,,P0:;P1:;P2:,3 3 4 ,,P0:165;P1:185.0;P2:190.0;,03:48
+MorVeredSecondAttempt,2,3,0,1568938408912,0,Ending game,,P0:;P1:;P2:,3 3 4 ,,P0:165;P1:185.0;P2:190.0;,03:48
+MorVeredSecondAttempt,2,4,1,1568938410388,0,Starting new game,1,P0:;P1:;P2:1;,4 4 4 1 1 1 3 3,2,P0:114;P1:190.0;P2:185.0;,03:48
+
+MorVeredSecondAttempt,2,4,1,1568938415439,0,Motivation: training session 2,1,P0:;P1:;P2:1;,4 4 4 1 1 1 3 3,2,P0:114;P1:190.0;P2:185.0;,03:56
+MorVeredSecondAttempt,2,4,1,1568938415439,0,Ending game,1,P0:;P1:;P2:1;,4 4 4 1 1 1 3 3,2,P0:114;P1:190.0;P2:185.0;,03:56
+MorVeredSecondAttempt,2,1,2,1568938416493,0,Starting new game,3 0,P0:;P1:3;;P2:0;,3 3 3 3 3 3 3 3 3,1 4 ,P0:43;P1:180.0;P2:180.0;,03:56
+
+MorVeredSecondAttempt,2,1,2,1568938418042,0,Clear path,,P0:;P1:;P2:,3 3 3 3 3 3 3 3 3 3,,P0:50;P1:180.0;P2:180.0;,04:00
+MorVeredSecondAttempt,2,1,2,1568938421903,0,Motivation: training session 3,,P0:;P1:;P2:,3 3 3 3 3 3 3 3 3 3,,P0:50;P1:180.0;P2:180.0;,03:56
+MorVeredSecondAttempt,2,1,2,1568938421903,0,Ending game,,P0:;P1:;P2:,3 3 3 3 3 3 3 3 3 3,,P0:50;P1:180.0;P2:180.0;,03:56
+MorVeredSecondAttempt,2,2,3,1568938422972,0,Starting new game,2,P0:;P1:;P2:2;,2 2 2 2 2 1 1,3,P0:109;P1:119.0;P2:114.0;,03:56
+
+MorVeredSecondAttempt,2,2,3,1568938432281,0,Clear path,,P0:;P1:;P2:,2 4 1 4 3 2 2 2 2 1,,P0:50;P1:119.0;P2:114.0;,03:52
+MorVeredSecondAttempt,2,2,3,1568938433736,0,Motivation: training session 4,,P0:;P1:;P2:,2 4 1 4 3 2 2 2 2 1,,P0:50;P1:119.0;P2:114.0;,03:51
+MorVeredSecondAttempt,2,2,3,1568938433736,0,Ending game,,P0:;P1:;P2:,2 4 1 4 3 2 2 2 2 1,,P0:50;P1:119.0;P2:114.0;,03:51
+MorVeredSecondAttempt,2,8,4,1568938434773,0,Starting new game,0 2,P0:;P1:0;;P2:2;,2 2 2 2 2 4 4 4 4 4,1 3 ,P0:48;P1:195.0;P2:180.0;,03:51
+
+MorVeredSecondAttempt,2,8,4,1568938435993,0,Clear path,,P0:;P1:;P2:,4 2 2 2 4 4 4 2 2 4,,P0:50;P1:195.0;P2:180.0;,04:00
+MorVeredSecondAttempt,2,8,4,1568938440087,0,Motivation: training session 5,,P0:;P1:;P2:,4 2 2 2 4 4 4 2 2 4,,P0:50;P1:195.0;P2:180.0;,03:56
+MorVeredSecondAttempt,2,8,4,1568938440087,0,Ending game,,P0:;P1:;P2:,4 2 2 2 4 4 4 2 2 4,,P0:50;P1:195.0;P2:180.0;,03:56
+MorVeredSecondAttempt,2,5,5,1568938441135,0,Starting new game,,P0:;P1:;P2:,2 3 3 4,,P0:170;P1:190.0;P2:195.0;,03:56
+
+MorVeredSecondAttempt,2,5,5,1568938445248,0,Motivation: training session 6,,P0:;P1:;P2:,2 3 3 4,,P0:170;P1:190.0;P2:195.0;,03:57
+MorVeredSecondAttempt,2,5,5,1568938445248,0,Ending game,,P0:;P1:;P2:,2 3 3 4,,P0:170;P1:190.0;P2:195.0;,03:57
+MorVeredSecondAttempt,2,6,6,1568938446382,0,Starting new game,2,P0:;P1:2;;P2:,2 2 2 2 2 2,3,P0:104;P1:99.0;P2:195.0;,03:57
+
+MorVeredSecondAttempt,2,6,6,1568938450328,0,Motivation: training session 7,2,P0:;P1:2;;P2:,2 2 2 2 2 2,3,P0:104;P1:99.0;P2:195.0;,03:58
+MorVeredSecondAttempt,2,6,6,1568938450328,0,Ending game,2,P0:;P1:2;;P2:,2 2 2 2 2 2,3,P0:104;P1:99.0;P2:195.0;,03:58
+MorVeredSecondAttempt,2,6,6,1568938450332,0,wrong answer told to try again,2,P0:;P1:2;;P2:,2 2 2 2 2 2,3,P0:104;P1:99.0;P2:195.0;,03:58
+MorVeredSecondAttempt,2,6,6,1568938452011,0,Clear path,,P0:;P1:;P2:,2 2 2 2 2 2 2 2 4 2,,P0:50;P1:99.0;P2:195.0;,03:56
+MorVeredSecondAttempt,2,6,6,1568938455199,0,Motivation: training session 7,,P0:;P1:;P2:,2 2 2 2 2 2 2 2 4 2,,P0:50;P1:99.0;P2:195.0;,03:53
+MorVeredSecondAttempt,2,6,6,1568938455200,0,Ending game,,P0:;P1:;P2:,2 2 2 2 2 2 2 2 4 2,,P0:50;P1:99.0;P2:195.0;,03:53
+MorVeredSecondAttempt,2,7,7,1568938456406,0,Starting new game,3,P0:;P1:3;;P2:,1 3 3 3 2 2 2,4,P0:109;P1:185.0;P2:109.0;,03:53
+
+MorVeredSecondAttempt,2,7,7,1568938457650,0,Removed cell 2-3-false,3,P0:;P1:3;;P2:,1 3 3 3 2 2 2 4 ,4,P0:-36;P1:185.0;P2:109.0;,04:00
+MorVeredSecondAttempt,2,7,7,1568938458049,0,Added cell 3-2-true,3,P0:;P1:3;;P2:,1 3 3 3 2 2 4 ,4,P0:-41;P1:185.0;P2:109.0;,04:00
+MorVeredSecondAttempt,2,7,7,1568938458337,0,Added cell 3-3-true,3,P0:;P1:3;;P2:,1 3 3 2 2 4 ,4,P0:-46;P1:185.0;P2:109.0;,04:00
+MorVeredSecondAttempt,2,7,7,1568938459786,0,Added cell 3-4-true,3,P0:;P1:3;;P2:,3 3 2 2 4 ,4,P0:99;P1:185.0;P2:109.0;,03:58
+MorVeredSecondAttempt,2,7,7,1568938460576,0,ChipRequest min:;From;1;Colour;3;ReqNrOfChips;0;Success;1,3,P0:;P1:3;;P2:,3 3 2 2 ,,P0:99;P1:185.0;P2:109.0;,03:57
+MorVeredSecondAttempt,2,7,7,1568938464400,0,Motivation: training session 8,,P0:;P1:;P2:,3 3 2 2 ,,P0:170;P1:185.0;P2:109.0;,03:54
+MorVeredSecondAttempt,2,7,7,1568938464400,0,Ending game,,P0:;P1:;P2:,3 3 2 2 ,,P0:170;P1:185.0;P2:109.0;,03:54
+
+
+MorVeredSecondAttempt,localGlobalEx,6,0,1568938465940,0,Read score file,,P0:;P1:;P2:;P3:;P4:;P5:,-,,,undefined:undefined
+MorVeredSecondAttempt,localGlobalEx,6,0,1568938469982,0,Read new file,,P0:;P1:;P2:;P3:;P4:;P5:,-,,,undefined:undefined
+MorVeredSecondAttempt,localGlobalEx,6,0,1568938470003,0,Starting new game,2 1,P0:;P1:2;;P2:1;;P3:,4 4 4 4 5 5 5 5,3 2 ,P0:38;P1:139.0;P2:180.0;P3:165.0;,undefined:undefined
+MorVeredSecondAttempt,localGlobalEx,6,0,1568938478242,0,Motivation: game 1,2 1,P0:;P1:2;;P2:1;;P3:,4 4 4 4 5 5 5 5,3 2 ,P0:38;P1:139.0;P2:180.0;P3:165.0;,02:53
+MorVeredSecondAttempt,localGlobalEx,6,0,1568938478242,0,Ending game,2 1,P0:;P1:2;;P2:1;;P3:,4 4 4 4 5 5 5 5,3 2 ,P0:38;P1:139.0;P2:180.0;P3:165.0;,02:53
+MorVeredSecondAttempt,localGlobalEx,3,1,1568938479337,0,Starting new game,4 4,P0:;P1:;P2:4;;P3:4;,1 1 1 1 3 4 2 2 2,5 5 ,P0:43;P1:170.0;P2:190.0;P3:118.0;,02:53
+
+MorVeredSecondAttempt,localGlobalEx,3,1,1568938482256,0,Motivation: game 2,4 4,P0:;P1:;P2:4;;P3:4;,1 1 1 1 3 4 2 2 2,5 5 ,P0:43;P1:170.0;P2:190.0;P3:118.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,3,1,1568938482257,0,Ending game,4 4,P0:;P1:;P2:4;;P3:4;,1 1 1 1 3 4 2 2 2,5 5 ,P0:43;P1:170.0;P2:190.0;P3:118.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,1,2,1568938483389,0,Starting new game,1,P0:;P1:;P2:;P3:1;,4 3 3 3 3 3 3,2,P0:109;P1:190.0;P2:104.0;P3:123.0;,02:59
+
+MorVeredSecondAttempt,localGlobalEx,1,2,1568938486328,0,Motivation: game 3,1,P0:;P1:;P2:;P3:1;,4 3 3 3 3 3 3,2,P0:109;P1:190.0;P2:104.0;P3:123.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,1,2,1568938486328,0,Ending game,1,P0:;P1:;P2:;P3:1;,4 3 3 3 3 3 3,2,P0:109;P1:190.0;P2:104.0;P3:123.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,7,3,1568938487231,0,Starting new game,0,P0:;P1:0;;P2:;P3:,2,1,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:59
+
+MorVeredSecondAttempt,localGlobalEx,7,3,1568938490016,0,Motivation: game 4,0,P0:;P1:0;;P2:;P3:,2,1,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,7,3,1568938490016,0,Ending game,0,P0:;P1:0;;P2:;P3:,2,1,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,4,4,1568938490876,0,Starting new game,,P0:;P1:;P2:;P3:,5 5 5,,P0:165;P1:170.0;P2:200.0;P3:195.0;,02:59
+
+MorVeredSecondAttempt,localGlobalEx,4,4,1568938494241,0,Motivation: game 5,,P0:;P1:;P2:;P3:,5 5 5,,P0:165;P1:170.0;P2:200.0;P3:195.0;,02:58
+MorVeredSecondAttempt,localGlobalEx,4,4,1568938494242,0,Ending game,,P0:;P1:;P2:;P3:,5 5 5,,P0:165;P1:170.0;P2:200.0;P3:195.0;,02:58
+MorVeredSecondAttempt,localGlobalEx,9,5,1568938495249,0,Starting new game,,P0:;P1:;P2:;P3:,2 3 3 4,,P0:170;P1:124.0;P2:170.0;P3:175.0;,02:58
+
+MorVeredSecondAttempt,localGlobalEx,9,5,1568938498232,0,Motivation: game 6,,P0:;P1:;P2:;P3:,2 3 3 4,,P0:170;P1:124.0;P2:170.0;P3:175.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,9,5,1568938498233,0,Ending game,,P0:;P1:;P2:;P3:,2 3 3 4,,P0:170;P1:124.0;P2:170.0;P3:175.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,8,6,1568938499102,0,Starting new game,2 2,P0:;P1:;P2:;P3:2;2;,1 1 1 1 1 1 4 4,3 3 ,P0:108;P1:205.0;P2:175.0;P3:119.0;,02:59
+
+MorVeredSecondAttempt,localGlobalEx,8,6,1568938501961,0,Motivation: game 7,2 2,P0:;P1:;P2:;P3:2;2;,1 1 1 1 1 1 4 4,3 3 ,P0:108;P1:205.0;P2:175.0;P3:119.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,8,6,1568938501961,0,Ending game,2 2,P0:;P1:;P2:;P3:2;2;,1 1 1 1 1 1 4 4,3 3 ,P0:108;P1:205.0;P2:175.0;P3:119.0;,02:59
+MorVeredSecondAttempt,localGlobalEx,5,7,1568938502829,0,Starting new game,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5,2,P0:109;P1:195.0;P2:134.0;P3:118.0;,02:59
+
+MorVeredSecondAttempt,localGlobalEx,5,7,1568938507936,0,Motivation: game 7,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5,2,P0:109;P1:195.0;P2:134.0;P3:118.0;,02:56
+MorVeredSecondAttempt,localGlobalEx,5,7,1568938507936,0,Ending game,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5,2,P0:109;P1:195.0;P2:134.0;P3:118.0;,02:56
+MorVeredSecondAttempt,localGlobalEx,10,8,1568938509320,0,Starting new game,2 2,P0:;P1:2;;P2:2;;P3:,1 2 5 5 5 5,3 3 ,P0:28;P1:205.0;P2:160.0;P3:43.0;,02:56
+
+MorVeredSecondAttempt,localGlobalEx,10,8,1568938513352,0,Motivation: game 8,2 2,P0:;P1:2;;P2:2;;P3:,1 2 5 5 5 5,3 3 ,P0:28;P1:205.0;P2:160.0;P3:43.0;,02:57
+MorVeredSecondAttempt,localGlobalEx,10,8,1568938513352,0,Ending game,2 2,P0:;P1:2;;P2:2;;P3:,1 2 5 5 5 5,3 3 ,P0:28;P1:205.0;P2:160.0;P3:43.0;,02:57
+MorVeredSecondAttempt,localGlobalEx,2,9,1568938514373,0,Starting new game,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 2,5,P0:119;P1:190.0;P2:195.0;P3:200.0;,02:57
+
+MorVeredSecondAttempt,localGlobalEx,2,9,1568938518776,0,Motivation: game 10,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 2,5,P0:119;P1:190.0;P2:195.0;P3:200.0;,02:57
+MorVeredSecondAttempt,localGlobalEx,2,9,1568938518776,0,Ending game,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 2,5,P0:119;P1:190.0;P2:195.0;P3:200.0;,02:57
+

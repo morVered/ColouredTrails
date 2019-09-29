@@ -1513,9 +1513,11 @@ function reset() {
 
 function saveToFile(data) {
     jsonString = String(data);
+    filename = playerID + '.csv';
+
     jQuery.ajax({
-        url: baseurl + '/saveactions.php',
-        data: { 'jsonString': jsonString },
-        type: 'POST'
-    });
+    url: baseurl + '/saveactions.php',
+    data: { 'jsonString': jsonString, 'filename':this.filename },
+    type: 'POST'
+});
 }

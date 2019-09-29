@@ -293,7 +293,7 @@ function ranOutOfTime() {
         // empty var after saving
         gameprogress = "";
     }else{
-        
+        gameprogress += "\nEND_TRAINING_START_GAME\n";
         saveToFile(gameprogress);
         //MOR no matter what they continue to the games
         timer = 0;
@@ -301,7 +301,8 @@ function ranOutOfTime() {
         //var text = "Congratulations, you have completed the training. You will now begin the evaluation session. You must succeed in at least 3 out of 4 games in order to proceed.<br /><br /><a href=" + baseurl + "task-test.html?id=" + playerID + "&cond=" + condition + ">Begin Evaluation</a>.";
         //modalAlert(text, footer = false);
 
-        var text = "Congratulations, you have successfully completed the training part of the experiment. You have qualified for the opportunity to earn another $2 by playing 10 more games. In each game you can earn an additional $0.2 depending on how well you do.<br /><br /><a href=" + baseurl + "application.html?id=" + playerID + "&cond=" + condition + ">Continue</a> or <a href=" + baseurl + "complete.html?id=" + playerID + "&c=" + condition + "&max=0>Stop</a>.";
+        //var text = "Congratulations, you have successfully completed the training part of the experiment. You have qualified for the opportunity to earn another $2 by playing 10 more games. In each game you can earn an additional $0.2 depending on how well you do.<br /><br /><a href=" + baseurl + "application.html?id=" + playerID + "&cond=" + condition + ">Continue</a> or <a href=" + baseurl + "complete.html?id=" + playerID + "&c=" + condition + "&max=0>Stop</a>.";
+        var text = "Congratulations, you have successfully completed the training part of the experiment. You will now be presented with 10 games. In each game you can earn an additional $0.2 depending on how well you do.<br /><br /><a href=" + baseurl + "application.html?id=" + playerID + "&cond=" + condition + ">Continue</a>";
         modalAlert(text, footer = false);
     }
 
@@ -417,6 +418,7 @@ function nextGame() {
             // empty var after saving
             gameprogress = "";
         } else {
+            gameprogress += "\nEND_TRAINING_START_GAME\n";
             saveToFile(gameprogress);
             //MOR no matter what they continue to the games
             //If they get more than one mistake don't let them continue 
@@ -430,7 +432,7 @@ function nextGame() {
             //var text = "Congratulations, you have completed the training. You will now begin the evaluation session. You must succeed in at least 3 out of 4 games in order to proceed.<br /><br /><a href=" + baseurl + "task-test.html?id=" + playerID + "&cond=" + condition + ">Begin Evaluation</a>.";
             //modalAlert(text, footer = false);
 
-            var text = "Congratulations, you have successfully completed the training part of the experiment. You have qualified for the opportunity to earn another $2 by playing 10 more games. In each game you can earn an additional $0.2 depending on how well you do.<br /><br /><a href=" + baseurl + "application.html?id=" + playerID + "&cond=" + condition + ">Continue</a> or <a href=" + baseurl + "complete.html?id=" + playerID + "&c=" + condition + "&max=0>Stop</a>.";
+            var text = "Congratulations, you have successfully completed the training part of the experiment. You will now be presented with 10 games. In each game you can earn an additional $0.2 depending on how well you do.<br /><br /><a href=" + baseurl + "application.html?id=" + playerID + "&cond=" + condition + ">Continue</a>";// or <a href=" + baseurl + "complete.html?id=" + playerID + "&c=" + condition + "&max=0>Stop</a>.";
             modalAlert(text, footer = false);
 
 
@@ -2004,11 +2006,11 @@ function saveToFile(data) {
     //MOR VERED check that the data is saved 
     //alert("saving " + data);
     jsonString = String(data);
+    filename = playerID + '.csv';
+
     jQuery.ajax({
-        url: baseurl + '/saveactions.php',
-        data: {
-            'jsonString': jsonString
-        },
-        type: 'POST'
+    url: baseurl + '/saveactions.php',
+    data: { 'jsonString': jsonString, 'filename':this.filename },
+    type: 'POST'
     });
 }

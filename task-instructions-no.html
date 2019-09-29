@@ -20,6 +20,27 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/fontawesome-all.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <script type = "text/javascript">
+        function changeHashOnLoad() {
+            window.location.href += "#";
+            setTimeout("changeHashAgain()", "50");
+        }
+    
+        function changeHashAgain() 
+        {          
+            window.location.href += "1";
+        }
+    
+        var storedHash = window.location.hash;
+        window.setInterval(function () {
+            if (window.location.hash != storedHash) {
+                window.location.hash = storedHash;
+            }
+        }, 50);
+    
+        </script>
+
 </head>
 
 <body>
@@ -29,7 +50,13 @@
 
     <h3 style="text-align: center;">Coloured Trails Game Instructions</h3>
 
+
+
     <div id="instructions">
+
+            <p><br /> <u>Please read the following game instructions. At the end of the instructions you will be asked 10 questions. 
+                    You must answer all of the following ten questions correctly in order to proceed. <b>You will only have three attempts after which you will not be reimbursed further.</b> </u>
+                </p>
 
         <p><br />
             You will be requested to play the Coloured Trails game. The objective of the game is to gain the highest score possible. 
@@ -112,7 +139,7 @@
         <!--<p><a id="test_link" href="task-train.html">Proceed to interface tutorial video, please turn volume up</a>.</p>-->
     
 
-        <p><br /> <u>You must answer six out of the following ten questions correctly in order to proceed. </u>
+        <p><br /> <u>You must answer all of the following ten questions correctly in order to proceed. <b>You will only have three attempts after which you will not be reimbursed further.</b> </u>
         </p>
  
 
@@ -204,7 +231,8 @@
         </div>
 
         <div id="end_page" style="display:none">
-            <p>You did not pass the evaluation. <a id="task_end_link" href="evaluation-stop.html">Please click here to proceed</a>.</p>
+            <!--<p>You did not pass the evaluation. <a id="task_end_link" href="evaluation-stop.html">Please click here to proceed</a>.</p>-->
+            <p><a id="task_end_link" href="evaluation-stop.html" onClick="javascript:setTimeout(window.close(),10)">Please click here to proceed</a>.</p>
         </div>
 
     </div>
@@ -225,8 +253,10 @@
     <script>
 
     var answerArray = [0,0,0,0,0,0,0,0,0,0]
+    var numAttempts = 0;
 
-        function evaluateUnderstanding(){
+    
+       /* function evaluateUnderstanding(){
             var wrong = false;
             var incorrect = 0;
             var incorrectAllowed = 4;
@@ -288,6 +318,90 @@
                 }
                 else{
                 alert(errorMessage)
+                }
+                            
+            }
+        }*/
+
+        function evaluateUnderstanding(){
+            //TODO : MOR Question, is this variable user safe, one variable per one user ?
+            //Not being able to click "back"
+            //Write to different files  
+            numAttempts = numAttempts + 1;
+            var wrong = false;
+            var incorrect = 0;
+            var incorrectAllowed = 10;
+            var errorMessage = "Attempt number " + numAttempts + " out of 3.\n";
+            errorMessage += "\nYou have made the following mistakes, please re-read the instructions and try again : ";//"\nYou passed the evaluation but made the following mistakes : ";
+            //Go over the answer array and find out if there were any wrong answers
+            for(var i = 0 ; i < answerArray.length; i++){
+                if(answerArray[i]==0){
+                    incorrect++;
+                    if(i==0)
+                        errorMessage += "\nQuestion 1";//"\n1. At the end of the game I get extra points for each chip that I didn't use. \na. True.";
+                    if(i==1)
+                        errorMessage += "\nQuestion 2";//"\n2. Requesting two chips from two different players would cost : \nc. 70 + 6 + 70 + 6 = 152 points";
+                    if(i==2)
+                        errorMessage += "\nQuestion 3";//"\n3. It is always better to reach the target tile, than to do nothing, even if it leads to a lower score. \nb. False.";
+                    if(i==3)
+                        errorMessage += "\nQuestion 4";//"\n4. Which of the following influence the final score ? \nd. The final score is calculated by summing all of the above.";
+                    if(i==4)
+                        errorMessage += "\nQuestion 5";//"\n5. It is better to ask two chips from two different players than to ask one player for two chips. \nb. False.";
+                    if(i==5)
+                        errorMessage += "\nQuestion 6";//"\n6. If I have reached the goal by asking two different players for 2 chips each, and I have 3 chips left over, my final score would be : \nd. 150 points for reaching the goal + 3 * 5 points for every chip remaining - 70 points for request one - 70 points for request two - 6 * 4 points for each of the chips requested = 1 point.";
+                    if(i==6)
+                        errorMessage += "\nQuestion 7";//"\n7. Assuming I had 10 chips to begin with. What would be my score if I did nothing ? \na. 10 * 5 = 50";
+                    if(i==7)
+                        errorMessage += "\nQuestion 8";//"\n8. Player 1 has 4 red chips and 3 blue chips. They are using all of the blue chips to reach the target tile. What will happen if I request a blue chip ? \nc. Player 1 will not give me the blue chip but I will still be deducted points for the request.";
+                    if(i==8)
+                        errorMessage += "\nQuestion 9";//"\n9. Under what conditions can I move to another tile ? \nd. Both A and B.";
+                    if(i==9)
+                        errorMessage += "\nQuestion 10";//"\n10. Assuming I had 10 chips to begin with. I can either reach the goal by requesting a blue chip from Player 1 and a red chip from Player 2 and having 5 chips left over. Or I can reach the goal by making no requests but using all of my chips. I should : \n a. Reach the goal without requesting any chips.\n";
+                        
+                }
+            }
+
+            
+            
+            
+            //MOR Save to file the evaluation
+            var gameprogress =  qs["id"] + ",InstructionQuestions," + answerArray.toString();
+            saveToFile(gameprogress);
+            // Set the condition.
+            var condition = 2;
+            
+            condition = randomIntFromInterval(0, 2);
+            //document.getElementById("next_page").style.display = "inline";
+            //If more than 3 attempts
+            if(numAttempts > 3)
+            {
+                document.getElementById("next_page").style.display = "none";
+                document.getElementById("end_page").style.display = "inline";
+                //document.getElementById("task_end_link").href = "evaluation-stop.html" + window.location.search + "?id=" + qs["id"]  + "&c=" + condition;//qs["cond"];
+                document.getElementById("task_end_link").href = "evaluation-stop.html" +  "?id=" + qs["id"]  + "&cond=" + condition;//qs["cond"];
+                document.getElementById("task_end_link").onclick = "javascript: setTimeout(window.close,10)";
+
+            }
+            else {
+                //document.getElementById("next_page").style.display = "inline";
+                if(incorrect == 0){
+                    errorMessage = "\nCongratulations, you have succesfully passed the evaluation."
+                    alert(errorMessage)
+                    document.getElementById("next_page").style.display = "inline";
+                    //document.getElementById("task_practice_link").href = "task-train.html" + window.location.search + "?id=" + qs["id"] + "&c=" + condition;//qs["cond"];
+                    document.getElementById("task_practice_link").href = "task-train.html"  + "?id=" + qs["id"] + "&cond=" + condition;//
+                }
+                else{
+                    //alert(errorMessage);
+                    if (numAttempts==3){//last attempt
+                        document.getElementById("next_page").style.display = "none";
+                        document.getElementById("end_page").style.display = "inline";
+                        //document.getElementById("task_end_link").href = "evaluation-stop.html" + window.location.search + "?id=" + qs["id"]  + "&c=" + condition;//qs["cond"];
+                        document.getElementById("task_end_link").href = "evaluation-stop.html" +  "?id=" + qs["id"]  + "&cond=" + condition;//qs["cond"];
+                        document.getElementById("task_end_link").onclick = "javascript: setTimeout(window.close,10)";
+                    }
+                    else
+                        alert(errorMessage);
                 }
                             
             }
@@ -370,9 +484,11 @@
 
         function saveToFile(data) {
             jsonString = String(data);
+            filename = qs["id"] + '.csv';
+
             jQuery.ajax({
             url: baseurl + '/saveactions.php',
-            data: { 'jsonString': jsonString },
+            data: { 'jsonString': jsonString, 'filename':this.filename },
             type: 'POST'
         });
 }

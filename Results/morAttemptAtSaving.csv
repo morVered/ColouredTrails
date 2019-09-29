@@ -1,0 +1,133 @@
+morAttemptAtSaving,InstructionQuestions,1,1,1,1,0,1,1,1,1,0
+morAttemptAtSaving,InstructionQuestions,1,1,1,1,1,1,1,1,1,1
+
+morAttemptAtSaving,2,7,0,1568935867132,0,Read score file,,P0:;P1:;P2:;P3:;P4:;P5:,-,,,undefined:undefined
+morAttemptAtSaving,2,7,0,1568935876135,0,Read new file,,P0:;P1:;P2:;P3:;P4:;P5:,-,,,undefined:undefined
+morAttemptAtSaving,2,7,0,1568935876602,0,Starting new game,3,P0:;P1:3;;P2:,1 3 3 3 2 2 2,4,P0:109;P1:185.0;P2:109.0;,undefined:undefined
+morAttemptAtSaving,2,7,0,1568935878089,0,Removed cell 2-3-false,3,P0:;P1:3;;P2:,1 3 3 3 2 2 2 4 ,4,P0:-36;P1:185.0;P2:109.0;,04:00
+morAttemptAtSaving,2,7,0,1568935878761,0,Added cell 3-2-true,3,P0:;P1:3;;P2:,1 3 3 3 2 2 4 ,4,P0:-41;P1:185.0;P2:109.0;,03:59
+morAttemptAtSaving,2,7,0,1568935879137,0,Added cell 3-3-true,3,P0:;P1:3;;P2:,1 3 3 2 2 4 ,4,P0:-46;P1:185.0;P2:109.0;,03:59
+morAttemptAtSaving,2,7,0,1568935879465,0,Added cell 3-4-true,3,P0:;P1:3;;P2:,3 3 2 2 4 ,4,P0:99;P1:185.0;P2:109.0;,03:59
+morAttemptAtSaving,2,7,0,1568935880728,0,ChipRequest min:;From;1;Colour;3;ReqNrOfChips;0;Success;1,3,P0:;P1:3;;P2:,3 3 2 2 ,,P0:99;P1:185.0;P2:109.0;,03:57
+morAttemptAtSaving,2,7,0,1568935888480,0,Motivation: trial number 1,,P0:;P1:;P2:,3 3 2 2 ,,P0:170;P1:185.0;P2:109.0;,03:50
+morAttemptAtSaving,2,7,0,1568935888480,0,Ending game,,P0:;P1:;P2:,3 3 2 2 ,,P0:170;P1:185.0;P2:109.0;,03:50
+morAttemptAtSaving,2,8,1,1568935889772,0,Starting new game,0 2,P0:;P1:0;;P2:2;,2 2 2 2 2 4 4 4 4 4,1 3 ,P0:48;P1:195.0;P2:180.0;,03:50
+
+morAttemptAtSaving,2,8,1,1568935890945,0,Removed cell 1-1-false,0 2,P0:;P1:0;;P2:2;,2 2 2 2 2 4 4 4 4 4 3 ,1 3 ,P0:-97;P1:195.0;P2:180.0;,04:00
+morAttemptAtSaving,2,8,1,1568935891305,0,Removed cell 2-1-false,0 2,P0:;P1:0;;P2:2;,2 2 2 2 2 4 4 4 4 4 3 1 ,1 3 ,P0:-92;P1:195.0;P2:180.0;,04:00
+morAttemptAtSaving,2,8,1,1568935892576,0,ChipRequest min:;From;1;Colour;0;ReqNrOfChips;0;Success;1,0 2,P0:;P1:0;;P2:2;,2 2 2 2 2 4 4 4 4 4 3 ,3  ,P0:-92;P1:195.0;P2:180.0;,03:59
+morAttemptAtSaving,2,8,1,1568935893343,0,ChipRequest min:;From;2;Colour;2;ReqNrOfChips;0;Success;1,2,P0:;P1:;P2:2;,2 2 2 2 2 4 4 4 4 4 , ,P0:-21;P1:195.0;P2:180.0;,03:58
+morAttemptAtSaving,2,8,1,1568935898104,0,Motivation: trial number 2,,P0:;P1:;P2:,2 2 2 2 2 4 4 4 4 4 , ,P0:50;P1:195.0;P2:180.0;,03:53
+morAttemptAtSaving,2,8,1,1568935898104,0,Ending game,,P0:;P1:;P2:,2 2 2 2 2 4 4 4 4 4 , ,P0:50;P1:195.0;P2:180.0;,03:53
+morAttemptAtSaving,2,2,2,1568935899564,0,Starting new game,2,P0:;P1:;P2:2;,2 2 2 2 2 1 1,3,P0:109;P1:119.0;P2:114.0;,03:53
+
+morAttemptAtSaving,2,2,2,1568935902330,0,Clear path,,P0:;P1:;P2:,2 4 1 4 3 2 2 2 2 1,,P0:50;P1:119.0;P2:114.0;,03:59
+morAttemptAtSaving,2,2,2,1568935913960,0,Motivation: trial number 3,,P0:;P1:;P2:,2 4 1 4 3 2 2 2 2 1,,P0:50;P1:119.0;P2:114.0;,03:47
+morAttemptAtSaving,2,2,2,1568935913960,0,Ending game,,P0:;P1:;P2:,2 4 1 4 3 2 2 2 2 1,,P0:50;P1:119.0;P2:114.0;,03:47
+morAttemptAtSaving,2,5,3,1568935915115,0,Starting new game,,P0:;P1:;P2:,2 3 3 4,,P0:170;P1:190.0;P2:195.0;,03:47
+
+morAttemptAtSaving,2,5,3,1568935919240,0,Motivation: trial number 4,,P0:;P1:;P2:,2 3 3 4,,P0:170;P1:190.0;P2:195.0;,03:57
+morAttemptAtSaving,2,5,3,1568935919240,0,Ending game,,P0:;P1:;P2:,2 3 3 4,,P0:170;P1:190.0;P2:195.0;,03:57
+morAttemptAtSaving,2,6,4,1568935920281,0,Starting new game,2,P0:;P1:2;;P2:,2 2 2 2 2 2,3,P0:104;P1:99.0;P2:195.0;,03:57
+
+morAttemptAtSaving,2,6,4,1568935922378,0,Clear path,,P0:;P1:;P2:,2 2 2 2 2 2 2 2 4 2,,P0:50;P1:99.0;P2:195.0;,03:59
+morAttemptAtSaving,2,6,4,1568935926327,0,Motivation: trial number 5,,P0:;P1:;P2:,2 2 2 2 2 2 2 2 4 2,,P0:50;P1:99.0;P2:195.0;,03:55
+morAttemptAtSaving,2,6,4,1568935926328,0,Ending game,,P0:;P1:;P2:,2 2 2 2 2 2 2 2 4 2,,P0:50;P1:99.0;P2:195.0;,03:55
+morAttemptAtSaving,2,4,5,1568935927358,0,Starting new game,1,P0:;P1:;P2:1;,4 4 4 1 1 1 3 3,2,P0:114;P1:190.0;P2:185.0;,03:55
+
+morAttemptAtSaving,2,4,5,1568935932160,0,Motivation: trial number 6,1,P0:;P1:;P2:1;,4 4 4 1 1 1 3 3,2,P0:114;P1:190.0;P2:185.0;,03:57
+morAttemptAtSaving,2,4,5,1568935932160,0,Ending game,1,P0:;P1:;P2:1;,4 4 4 1 1 1 3 3,2,P0:114;P1:190.0;P2:185.0;,03:57
+morAttemptAtSaving,2,3,6,1568935933525,0,Starting new game,0,P0:;P1:0;;P2:,3 3 2 2 4 4,1,P0:104;P1:185.0;P2:190.0;,03:57
+
+morAttemptAtSaving,2,3,6,1568935934713,0,Removed cell 3-2-false,0,P0:;P1:0;;P2:,3 3 2 2 4 4 1 ,1,P0:-41;P1:185.0;P2:190.0;,04:00
+morAttemptAtSaving,2,3,6,1568935935153,0,Added cell 2-1-true,0,P0:;P1:0;;P2:,3 3 2 4 4 1 ,1,P0:-46;P1:185.0;P2:190.0;,04:00
+morAttemptAtSaving,2,3,6,1568935935425,0,Added cell 3-1-true,0,P0:;P1:0;;P2:,3 3 4 4 1 ,1,P0:-51;P1:185.0;P2:190.0;,04:00
+morAttemptAtSaving,2,3,6,1568935935778,0,Added cell 4-1-true,0,P0:;P1:0;;P2:,3 3 4 1 ,1,P0:94;P1:185.0;P2:190.0;,03:59
+morAttemptAtSaving,2,3,6,1568935936728,0,ChipRequest min:;From;1;Colour;0;ReqNrOfChips;0;Success;1,0,P0:;P1:0;;P2:,3 3 4 ,,P0:94;P1:185.0;P2:190.0;,03:58
+morAttemptAtSaving,2,3,6,1568935939632,0,Motivation: trial number 7,,P0:;P1:;P2:,3 3 4 ,,P0:165;P1:185.0;P2:190.0;,03:55
+morAttemptAtSaving,2,3,6,1568935939632,0,Ending game,,P0:;P1:;P2:,3 3 4 ,,P0:165;P1:185.0;P2:190.0;,03:55
+morAttemptAtSaving,2,1,7,1568935940573,0,Starting new game,3 0,P0:;P1:3;;P2:0;,3 3 3 3 3 3 3 3 3,1 4 ,P0:43;P1:180.0;P2:180.0;,03:55
+
+morAttemptAtSaving,2,1,7,1568935942123,0,Clear path,,P0:;P1:;P2:,3 3 3 3 3 3 3 3 3 3,,P0:50;P1:180.0;P2:180.0;,04:00
+morAttemptAtSaving,2,1,7,1568935945536,0,Motivation: trial number 8,,P0:;P1:;P2:,3 3 3 3 3 3 3 3 3 3,,P0:50;P1:180.0;P2:180.0;,03:57
+morAttemptAtSaving,2,1,7,1568935945536,0,Ending game,,P0:;P1:;P2:,3 3 3 3 3 3 3 3 3 3,,P0:50;P1:180.0;P2:180.0;,03:57
+
+
+morAttemptAtSaving,localGlobalEx,7,0,1568935948114,0,Read score file,,P0:;P1:;P2:;P3:;P4:;P5:,-,,,undefined:undefined
+morAttemptAtSaving,localGlobalEx,7,0,1568935952768,0,Read new file,,P0:;P1:;P2:;P3:;P4:;P5:,-,,,undefined:undefined
+morAttemptAtSaving,localGlobalEx,7,0,1568935953389,0,Starting new game,0,P0:;P1:0;;P2:;P3:,2,1,P0:79;P1:109.0;P2:114.0;P3:165.0;,undefined:undefined
+morAttemptAtSaving,localGlobalEx,7,0,1568935964815,1,Changed player,0,P0:;P1:;P2:3;;P3:,2 2 2 1 1 5 5,4,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:50
+morAttemptAtSaving,localGlobalEx,7,0,1568935965470,2,Changed player,0,P0:;P1:;P2:;P3:2;,4 1 5 5 5 2 2 2,3,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:49
+morAttemptAtSaving,localGlobalEx,7,0,1568935965982,3,Changed player,0,P0:;P1:;P2:;P3:,3 5 5,,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:49
+morAttemptAtSaving,localGlobalEx,7,0,1568935966566,0,Changed player,0,P0:;P1:0;;P2:;P3:,2,1,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:48
+morAttemptAtSaving,localGlobalEx,7,0,1568935970906,0,Motivation: game number 1,0,P0:;P1:0;;P2:;P3:,2,1,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:44
+morAttemptAtSaving,localGlobalEx,7,0,1568935970906,0,Ending game,0,P0:;P1:0;;P2:;P3:,2,1,P0:79;P1:109.0;P2:114.0;P3:165.0;,02:44
+morAttemptAtSaving,localGlobalEx,2,1,1568935972174,0,Starting new game,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 2,5,P0:119;P1:190.0;P2:195.0;P3:200.0;,02:44
+
+morAttemptAtSaving,localGlobalEx,2,1,1568935976395,0,Removed cell 4-4-false,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 2 5 ,5,P0:-26;P1:190.0;P2:195.0;P3:200.0;,02:57
+morAttemptAtSaving,localGlobalEx,2,1,1568935977355,0,Added cell 3-3-true,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 5 ,5,P0:-31;P1:190.0;P2:195.0;P3:200.0;,02:56
+morAttemptAtSaving,localGlobalEx,2,1,1568935977701,0,Denied adding cell 4-3-false,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 5 ,5,P0:-31;P1:190.0;P2:195.0;P3:200.0;,02:56
+morAttemptAtSaving,localGlobalEx,2,1,1568935982226,0,Removed cell 3-3-true,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 5 2 ,5,P0:-26;P1:190.0;P2:195.0;P3:200.0;,02:51
+morAttemptAtSaving,localGlobalEx,2,1,1568935982691,0,Removed cell 3-4-true,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 5 2 1 ,5,P0:-21;P1:190.0;P2:195.0;P3:200.0;,02:51
+morAttemptAtSaving,localGlobalEx,2,1,1568935987363,0,Restore suggested path,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 2,5,P0:119;P1:190.0;P2:195.0;P3:200.0;,02:46
+morAttemptAtSaving,localGlobalEx,2,1,1568935991861,0,Motivation: game number 2,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 2,5,P0:119;P1:190.0;P2:195.0;P3:200.0;,02:42
+morAttemptAtSaving,localGlobalEx,2,1,1568935991861,0,Ending game,4,P0:;P1:4;;P2:;P3:,1 1 1 4 4 2 2 2 2,5,P0:119;P1:190.0;P2:195.0;P3:200.0;,02:42
+morAttemptAtSaving,localGlobalEx,3,2,1568935993297,0,Starting new game,4 4,P0:;P1:;P2:4;;P3:4;,1 1 1 1 3 4 2 2 2,5 5 ,P0:43;P1:170.0;P2:190.0;P3:118.0;,02:42
+
+morAttemptAtSaving,localGlobalEx,3,2,1568935997972,0,Motivation: game number 13,4 4,P0:;P1:;P2:4;;P3:4;,1 1 1 1 3 4 2 2 2,5 5 ,P0:43;P1:170.0;P2:190.0;P3:118.0;,02:57
+morAttemptAtSaving,localGlobalEx,3,2,1568935997973,0,Ending game,4 4,P0:;P1:;P2:4;;P3:4;,1 1 1 1 3 4 2 2 2,5 5 ,P0:43;P1:170.0;P2:190.0;P3:118.0;,02:57
+morAttemptAtSaving,localGlobalEx,9,3,1568935999580,0,Starting new game,,P0:;P1:;P2:;P3:,2 3 3 4,,P0:170;P1:124.0;P2:170.0;P3:175.0;,02:57
+
+morAttemptAtSaving,localGlobalEx,9,3,1568936004149,0,Motivation: game number 4,,P0:;P1:;P2:;P3:,2 3 3 4,,P0:170;P1:124.0;P2:170.0;P3:175.0;,02:57
+morAttemptAtSaving,localGlobalEx,9,3,1568936004149,0,Ending game,,P0:;P1:;P2:;P3:,2 3 3 4,,P0:170;P1:124.0;P2:170.0;P3:175.0;,02:57
+morAttemptAtSaving,localGlobalEx,5,4,1568936005176,0,Starting new game,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5,2,P0:109;P1:195.0;P2:134.0;P3:118.0;,02:57
+
+morAttemptAtSaving,localGlobalEx,5,4,1568936008255,0,Removed cell 5-6-false,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5 2 ,2,P0:-36;P1:195.0;P2:134.0;P3:118.0;,02:58
+morAttemptAtSaving,localGlobalEx,5,4,1568936008790,0,Removed cell 5-5-true,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5 2 4 ,2,P0:-31;P1:195.0;P2:134.0;P3:118.0;,02:58
+morAttemptAtSaving,localGlobalEx,5,4,1568936009246,0,Removed cell 4-6-false,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5 2 4 1 ,2,P0:-26;P1:195.0;P2:134.0;P3:118.0;,02:57
+morAttemptAtSaving,localGlobalEx,5,4,1568936009606,0,Removed cell 4-7-true,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5 2 4 1 1 ,2,P0:-21;P1:195.0;P2:134.0;P3:118.0;,02:57
+morAttemptAtSaving,localGlobalEx,5,4,1568936011134,0,Added cell 5-8-true,1,P0:;P1:1;;P2:;P3:,4 5 5 5 5 5 2 4 1 1 ,2,P0:-26;P1:195.0;P2:134.0;P3:118.0;,02:56
+morAttemptAtSaving,localGlobalEx,5,4,1568936013118,0,Added cell 6-8-true,1,P0:;P1:1;;P2:;P3:,4 5 5 5 5 2 4 1 1 ,2,P0:-31;P1:195.0;P2:134.0;P3:118.0;,02:54
+morAttemptAtSaving,localGlobalEx,5,4,1568936013503,0,Added cell 6-7-true,1,P0:;P1:1;;P2:;P3:,4 5 5 5 5 2 4 1 ,2,P0:-36;P1:195.0;P2:134.0;P3:118.0;,02:53
+morAttemptAtSaving,localGlobalEx,5,4,1568936013951,0,Added cell 6-6-true,1,P0:;P1:1;;P2:;P3:,4 5 5 5 2 4 1 ,2,P0:-41;P1:195.0;P2:134.0;P3:118.0;,02:53
+morAttemptAtSaving,localGlobalEx,5,4,1568936014391,0,Added cell 5-6-false,1,P0:;P1:1;;P2:;P3:,4 5 5 5 4 1 ,2,P0:-46;P1:195.0;P2:134.0;P3:118.0;,02:52
+morAttemptAtSaving,localGlobalEx,5,4,1568936014808,0,Added cell 5-5-true,1,P0:;P1:1;;P2:;P3:,5 5 5 4 1 ,2,P0:99;P1:195.0;P2:134.0;P3:118.0;,02:52
+morAttemptAtSaving,localGlobalEx,5,4,1568936017431,0,Removed cell 5-5-true,1,P0:;P1:1;;P2:;P3:,5 5 5 4 1 4 ,2,P0:-46;P1:195.0;P2:134.0;P3:118.0;,02:49
+morAttemptAtSaving,localGlobalEx,5,4,1568936017879,0,Added cell 5-5-true,1,P0:;P1:1;;P2:;P3:,5 5 5 1 4 ,2,P0:99;P1:195.0;P2:134.0;P3:118.0;,02:49
+morAttemptAtSaving,localGlobalEx,5,4,1568936019231,0,Removed cell 5-6-false,1,P0:;P1:1;;P2:;P3:,5 5 5 1 4 2 ,2,P0:-46;P1:195.0;P2:134.0;P3:118.0;,02:47
+morAttemptAtSaving,localGlobalEx,5,4,1568936019703,0,Removed cell 5-5-true,1,P0:;P1:1;;P2:;P3:,5 5 5 1 4 2 4 ,2,P0:-41;P1:195.0;P2:134.0;P3:118.0;,02:47
+morAttemptAtSaving,localGlobalEx,5,4,1568936020758,0,ChipRequest min:;From;1;Colour;1;ReqNrOfChips;0;Success;1,1,P0:;P1:1;;P2:;P3:,5 5 5 1 4 4 ,,P0:-41;P1:195.0;P2:134.0;P3:118.0;,02:46
+morAttemptAtSaving,localGlobalEx,5,4,1568936036001,0,Clear path,,P0:;P1:;P2:;P3:,5 3 1 1 5 3 4 3 5 4 1 3 5 5 5 ,,P0:75;P1:195.0;P2:134.0;P3:118.0;,02:31
+morAttemptAtSaving,localGlobalEx,5,4,1568936037082,0,Denied adding cell 0-8-false,,P0:;P1:;P2:;P3:,5 3 1 1 5 3 4 3 5 4 1 3 5 5 5 ,,P0:75;P1:195.0;P2:134.0;P3:118.0;,02:30
+morAttemptAtSaving,localGlobalEx,5,4,1568936038791,0,Added cell 1-9-true,,P0:;P1:;P2:;P3:,5 1 1 5 3 4 3 5 4 1 3 5 5 5 ,,P0:70;P1:195.0;P2:134.0;P3:118.0;,02:28
+morAttemptAtSaving,localGlobalEx,5,4,1568936039327,0,Added cell 1-8-true,,P0:;P1:;P2:;P3:,5 1 5 3 4 3 5 4 1 3 5 5 5 ,,P0:65;P1:195.0;P2:134.0;P3:118.0;,02:27
+morAttemptAtSaving,localGlobalEx,5,4,1568936039823,0,Added cell 1-7-true,,P0:;P1:;P2:;P3:,5 5 3 4 3 5 4 1 3 5 5 5 ,,P0:60;P1:195.0;P2:134.0;P3:118.0;,02:27
+morAttemptAtSaving,localGlobalEx,5,4,1568936046879,0,Added cell 0-7-true,,P0:;P1:;P2:;P3:,5 5 4 3 5 4 1 3 5 5 5 ,,P0:55;P1:195.0;P2:134.0;P3:118.0;,02:20
+morAttemptAtSaving,localGlobalEx,5,4,1568936047275,0,Added cell 0-6-true,,P0:;P1:;P2:;P3:,5 5 4 3 5 4 3 5 5 5 ,,P0:50;P1:195.0;P2:134.0;P3:118.0;,02:19
+morAttemptAtSaving,localGlobalEx,5,4,1568936047709,0,Denied adding cell 0-5-false,,P0:;P1:;P2:;P3:,5 5 4 3 5 4 3 5 5 5 ,,P0:50;P1:195.0;P2:134.0;P3:118.0;,02:19
+morAttemptAtSaving,localGlobalEx,5,4,1568936049939,0,Clear path,,P0:;P1:;P2:;P3:,5 3 1 1 5 3 4 3 5 4 1 3 5 5 5 ,,P0:75;P1:195.0;P2:134.0;P3:118.0;,02:17
+morAttemptAtSaving,localGlobalEx,5,4,1568936050327,0,Restore suggested path,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5,2,P0:109;P1:195.0;P2:134.0;P3:118.0;,02:16
+morAttemptAtSaving,localGlobalEx,5,4,1568936056601,0,Motivation: game number 5,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5,2,P0:109;P1:195.0;P2:134.0;P3:118.0;,02:10
+morAttemptAtSaving,localGlobalEx,5,4,1568936056601,0,Ending game,1,P0:;P1:1;;P2:;P3:,3 4 5 5 5 5 5,2,P0:109;P1:195.0;P2:134.0;P3:118.0;,02:10
+morAttemptAtSaving,localGlobalEx,4,5,1568936057705,0,Starting new game,,P0:;P1:;P2:;P3:,5 5 5,,P0:165;P1:170.0;P2:200.0;P3:195.0;,02:10
+
+morAttemptAtSaving,localGlobalEx,4,5,1568936060577,0,Motivation: game number 1,,P0:;P1:;P2:;P3:,5 5 5,,P0:165;P1:170.0;P2:200.0;P3:195.0;,02:59
+morAttemptAtSaving,localGlobalEx,4,5,1568936060577,0,Ending game,,P0:;P1:;P2:;P3:,5 5 5,,P0:165;P1:170.0;P2:200.0;P3:195.0;,02:59
+morAttemptAtSaving,localGlobalEx,6,6,1568936061347,0,Starting new game,2 1,P0:;P1:2;;P2:1;;P3:,4 4 4 4 5 5 5 5,3 2 ,P0:38;P1:139.0;P2:180.0;P3:165.0;,02:59
+
+morAttemptAtSaving,localGlobalEx,6,6,1568936073937,0,Motivation: game number 1,2 1,P0:;P1:2;;P2:1;;P3:,4 4 4 4 5 5 5 5,3 2 ,P0:38;P1:139.0;P2:180.0;P3:165.0;,02:49
+morAttemptAtSaving,localGlobalEx,6,6,1568936073937,0,Ending game,2 1,P0:;P1:2;;P2:1;;P3:,4 4 4 4 5 5 5 5,3 2 ,P0:38;P1:139.0;P2:180.0;P3:165.0;,02:49
+morAttemptAtSaving,localGlobalEx,1,7,1568936075442,0,Starting new game,1,P0:;P1:;P2:;P3:1;,4 3 3 3 3 3 3,2,P0:109;P1:190.0;P2:104.0;P3:123.0;,02:49
+
+morAttemptAtSaving,localGlobalEx,1,7,1568936084937,0,Motivation: game number 1,1,P0:;P1:;P2:;P3:1;,4 3 3 3 3 3 3,2,P0:109;P1:190.0;P2:104.0;P3:123.0;,02:52
+morAttemptAtSaving,localGlobalEx,1,7,1568936084937,0,Ending game,1,P0:;P1:;P2:;P3:1;,4 3 3 3 3 3 3,2,P0:109;P1:190.0;P2:104.0;P3:123.0;,02:52
+morAttemptAtSaving,localGlobalEx,8,8,1568936088027,0,Starting new game,2 2,P0:;P1:;P2:;P3:2;2;,1 1 1 1 1 1 4 4,3 3 ,P0:108;P1:205.0;P2:175.0;P3:119.0;,02:52
+
+morAttemptAtSaving,localGlobalEx,8,8,1568936090965,0,Clear path,,P0:;P1:;P2:;P3:,2 1 4 5 4 4 1 2 3 1 1 1 1 1 5 ,,P0:75;P1:205.0;P2:175.0;P3:119.0;,02:59
+morAttemptAtSaving,localGlobalEx,8,8,1568936092569,0,Motivation: game number 1,,P0:;P1:;P2:;P3:,2 1 4 5 4 4 1 2 3 1 1 1 1 1 5 ,,P0:75;P1:205.0;P2:175.0;P3:119.0;,02:57
+morAttemptAtSaving,localGlobalEx,8,8,1568936092569,0,Ending game,,P0:;P1:;P2:;P3:,2 1 4 5 4 4 1 2 3 1 1 1 1 1 5 ,,P0:75;P1:205.0;P2:175.0;P3:119.0;,02:57
+morAttemptAtSaving,localGlobalEx,10,9,1568936094028,0,Starting new game,2 2,P0:;P1:2;;P2:2;;P3:,1 2 5 5 5 5,3 3 ,P0:28;P1:205.0;P2:160.0;P3:43.0;,02:57
+
+morAttemptAtSaving,localGlobalEx,10,9,1568936096738,0,Motivation: game number 1,2 2,P0:;P1:2;;P2:2;;P3:,1 2 5 5 5 5,3 3 ,P0:28;P1:205.0;P2:160.0;P3:43.0;,02:59
+morAttemptAtSaving,localGlobalEx,10,9,1568936096738,0,Ending game,2 2,P0:;P1:2;;P2:2;;P3:,1 2 5 5 5 5,3 3 ,P0:28;P1:205.0;P2:160.0;P3:43.0;,02:59
+
